@@ -29,22 +29,26 @@ namespace VKR
             scheme.dVbe = -0.002;
             scheme.dIcbo = 2;
 
-            Table1.Rows[0].Cells[1].Text = scheme.hfeMin.ToString();
-            Table1.Rows[0].Cells[2].Text = scheme.hfeTyp.ToString();
-            Table1.Rows[0].Cells[3].Text = scheme.hfeMax.ToString();
-            Table1.Rows[1].Cells[0].Text = scheme.TcMin.ToString();
-            Table1.Rows[2].Cells[0].Text = scheme.TcTyp.ToString();
-            Table1.Rows[3].Cells[0].Text = scheme.TcMax.ToString();
+            IcTable.Rows[0].Cells[1].Text = scheme.hfeMin.ToString();
+            IcTable.Rows[0].Cells[2].Text = scheme.hfeTyp.ToString();
+            IcTable.Rows[0].Cells[3].Text = scheme.hfeMax.ToString();
+            IcTable.Rows[1].Cells[0].Text = scheme.TcMin.ToString();
+            IcTable.Rows[2].Cells[0].Text = scheme.TcTyp.ToString();
+            IcTable.Rows[3].Cells[0].Text = scheme.TcMax.ToString();
 
-            Table1.Rows[1].Cells[1].Text = scheme.CalculateIc(scheme.hfeMin, scheme.TcMin).ToString();
-            Table1.Rows[1].Cells[2].Text = scheme.CalculateIc(scheme.hfeTyp, scheme.TcMin).ToString();
-            Table1.Rows[1].Cells[3].Text = scheme.CalculateIc(scheme.hfeMax, scheme.TcMin).ToString();
-            Table1.Rows[2].Cells[1].Text = scheme.CalculateIc(scheme.hfeMin, scheme.TcTyp).ToString();
-            Table1.Rows[2].Cells[2].Text = scheme.CalculateIc(scheme.hfeTyp, scheme.TcTyp).ToString();
-            Table1.Rows[2].Cells[3].Text = scheme.CalculateIc(scheme.hfeMax, scheme.TcTyp).ToString();
-            Table1.Rows[3].Cells[1].Text = scheme.CalculateIc(scheme.hfeMin, scheme.TcMax).ToString();
-            Table1.Rows[3].Cells[2].Text = scheme.CalculateIc(scheme.hfeTyp, scheme.TcMax).ToString();
-            Table1.Rows[3].Cells[3].Text = scheme.CalculateIc(scheme.hfeMax, scheme.TcMax).ToString();
+            IcTable.Rows[1].Cells[1].Text = scheme.CalculateIc(scheme.hfeMin, scheme.TcMin).ToString("0.00");
+            IcTable.Rows[1].Cells[2].Text = scheme.CalculateIc(scheme.hfeTyp, scheme.TcMin).ToString("0.00");
+            IcTable.Rows[1].Cells[3].Text = scheme.CalculateIc(scheme.hfeMax, scheme.TcMin).ToString("0.00");
+            IcTable.Rows[2].Cells[1].Text = scheme.CalculateIc(scheme.hfeMin, scheme.TcTyp).ToString("0.00");
+            IcTable.Rows[2].Cells[2].Text = scheme.CalculateIc(scheme.hfeTyp, scheme.TcTyp).ToString("0.00");
+            IcTable.Rows[2].Cells[3].Text = scheme.CalculateIc(scheme.hfeMax, scheme.TcTyp).ToString("0.00");
+            IcTable.Rows[3].Cells[1].Text = scheme.CalculateIc(scheme.hfeMin, scheme.TcMax).ToString("0.00");
+            IcTable.Rows[3].Cells[2].Text = scheme.CalculateIc(scheme.hfeTyp, scheme.TcMax).ToString("0.00");
+            IcTable.Rows[3].Cells[3].Text = scheme.CalculateIc(scheme.hfeMax, scheme.TcMax).ToString("0.00");
+
+            STable.Rows[1].Cells[1].Text = scheme.SIcbo(scheme.hfeTyp).ToString("0.00E+00");
+            STable.Rows[2].Cells[1].Text = scheme.SInternalVbe(scheme.hfeTyp).ToString("0.00E+00");
+            STable.Rows[3].Cells[1].Text = scheme.Shfe(scheme.hfeTyp).ToString("0.00E+00");
         }
     }
 }

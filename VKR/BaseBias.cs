@@ -110,12 +110,12 @@ namespace VKR
 
         public double SInternalVbe(double hfe)
         {
-            return -hfe / (hie + Rb);
+            return -hfe / (hie + 30000);
         }
 
         public double Shfe(double hfe)
         {
-            return (Vcc - InternalVbe) / (hie + Rb) + Icbo;
+            return (Vcc - InternalVbe) / (hie + 30000) + Icbo;
         }
 
         public double CalculateIc(double hfe, double Tc)
@@ -123,7 +123,7 @@ namespace VKR
             double Ic = hfe * (Vcc - InternalVbe) / (hie + Rb) + Icbo * (1 + hfe);
             if (Tc == TcTyp)
             {
-                return Ic;
+                return Ic*1000;
             }
             else
             {
@@ -132,7 +132,7 @@ namespace VKR
                 double deltaInternalVbe = dVbe * deltaTc;
                 double deltahfe = hfe * (1 + dhfe / 100 * deltaTc) - hfe;
 
-                return Ic + SIcbo(hfe) * deltaIcbo + SInternalVbe(hfe) * deltaInternalVbe + Shfe(hfe) * deltahfe;
+                return (Ic + SIcbo(hfe) * deltaIcbo + SInternalVbe(hfe) * deltaInternalVbe + Shfe(hfe) * deltahfe)*1000;
             }
         }
     }
