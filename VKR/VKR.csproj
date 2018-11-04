@@ -200,6 +200,7 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BaseBias.png" />
     <Content Include="BaseBias.svg" />
+    <Content Include="CollectorFBForm.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -379,6 +380,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="BaseBias.cs" />
+    <Compile Include="CollectorFB.cs" />
+    <Compile Include="CollectorFBForm.aspx.cs">
+      <DependentUpon>CollectorFBForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CollectorFBForm.aspx.designer.cs">
+      <DependentUpon>CollectorFBForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -428,6 +437,8 @@
     <Compile Include="BaseBiasForm.aspx.designer.cs">
       <DependentUpon>BaseBiasForm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="VoltageFeedbackCurrentSource.cs" />
+    <Compile Include="VoltageFeedbackVoltageSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
