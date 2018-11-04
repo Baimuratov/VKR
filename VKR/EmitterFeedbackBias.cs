@@ -5,7 +5,7 @@ using System.Web;
 
 namespace VKR
 {
-    public class VoltageFeedbackVoltageSource
+    public class EmitterFeedbackBias
     {
         /// <summary>
         /// Номинальный ток коллектора
@@ -35,7 +35,12 @@ namespace VKR
         /// Напряжение на втором базовом сопротивлении
         /// </summary>
         public double Vrb2
-        { get; set; }
+        {
+            get
+            {
+                return InternalVbe + Re * (Ib + Ic);
+            }
+        }
 
         /// <summary>
         /// Коэффициент усиления тока коллектора, минимальное значение
@@ -142,13 +147,24 @@ namespace VKR
         }
 
         /// <summary>
+        /// Сопротивление эмиттера
+        /// </summary>
+        public double Re
+        {
+            get
+            {
+                return (Vcc - Vce) / (Ic * (1 + 1 / hfeTyp));
+            }
+        }
+
+        /// <summary>
         /// Первое сопротивление базы
         /// </summary>
         public double Rb1
         {
             get
             {
-                return (Vce - (Ib2 * Rb2)) / (Ib + Ib2);
+                return (Vcc - (Ib2 * Rb2)) / (Ib + Ib2);
             }
         }
 
@@ -159,7 +175,7 @@ namespace VKR
         {
             get
             {
-                return Vbe / Ib2;
+                return Vrb2 / Ib2;
             }
         }
 
@@ -181,10 +197,10 @@ namespace VKR
         /// <returns></returns>
         public double SIcbo(double hfe)
         {
-            double A = Rc / hfe + Rc + Rb1 / hfe + Rb1;
-            double B = Rc / (Rb2 * hfe) + Rc / Rb2 + Rb1 / (Rb2 * hfe) + Rb1 / Rb2 + 1 / hfe + 1;
-            double C = Rc + Rc / hfe + Rb1 / hfe + hie * (Rc / (Rb2 * hfe) + Rb1 / (Rb2 * hfe) + 1 / hfe);
-            return (hie * B + A) / C;
+            double A = Rb1 / (Rb2 * hfe) + Rb1 / Rb2 + 1 / hfe + 1;
+            double B = Rb1 / Rb2 * Re / hfe + Rb1 / Rb2 * Re + Re / hfe + Re + Rb1 / hfe + Rb1;
+            double C = hie * (1 / hfe + Rb1 / (Rb2 * hfe)) + Re / hfe + Re + Rb1 / Rb2 * Re / hfe + Rb1 / Rb2 * Re + Rb1 / hfe;
+            return (hie * A + B) / C;
         }
 
         /// <summary>
@@ -194,8 +210,8 @@ namespace VKR
         /// <returns></returns>
         public double SInternalVbe(double hfe)
         {
-            double C = Rc + Rc / hfe + Rb1 / hfe + hie * (Rc / (Rb2 * hfe) + Rb1 / (Rb2 * hfe) + 1 / hfe);
-            return (-Rc / Rb2 - Rb1 / Rb2 - 1) / C;
+            double C = hie * (1 / hfe + Rb1 / (Rb2 * hfe)) + Re / hfe + Re + Rb1 / Rb2 * Re / hfe + Rb1 / Rb2 * Re + Rb1 / hfe;
+            return (-1 - Rb1 / Rb2) / C;
         }
 
         /// <summary>
@@ -205,14 +221,14 @@ namespace VKR
         /// <returns></returns>
         public double Shfe(double hfe)
         {
-            double A = Rc / hfe + Rc + Rb1 / hfe + Rb1;
-            double B = Rc / (Rb2 * hfe) + Rc / Rb2 + Rb1 / (Rb2 * hfe) + Rb1 / Rb2 + 1 / hfe + 1;
-            double C = Rc + Rc / hfe + Rb1 / hfe + hie * (Rc / (Rb2 * hfe) + Rb1 / (Rb2 * hfe) + 1 / hfe);
-            double D = Rc / Rb2 * InternalVbe + Rb1 / Rb2 * InternalVbe + InternalVbe;
-            double E = -Rc / (Rb2 * Math.Pow(hfe, 2)) - Rb1 / (Rb2 * Math.Pow(hfe, 2)) - 1 / Math.Pow(hfe, 2);
-            return (Icbo * (-Rc / Math.Pow(hfe, 2) - Rb1 / Math.Pow(hfe, 2)) + Icbo * hie * E) / C
-                - (Icbo * A + Icbo * hie * B - D + Vcc) / Math.Pow(C, 2)
-                * (-Rc / Math.Pow(hfe, 2) - Rb1 / Math.Pow(hfe, 2) + hie * E);
+            double A = Rb1 / (Rb2 * hfe) + Rb1 / Rb2 + 1 / hfe + 1;
+            double B = Rb1 / Rb2 * Re / hfe + Rb1 / Rb2 * Re + Re / hfe + Re + Rb1 / hfe + Rb1;
+            double C = hie * (1 / hfe + Rb1 / (Rb2 * hfe)) + Re / hfe + Re + Rb1 / Rb2 * Re / hfe + Rb1 / Rb2 * Re + Rb1 / hfe;
+            double D = InternalVbe + Rb1 / Rb2 * InternalVbe - Vcc;
+            double E = -Re / Math.Pow(hfe, 2) - Rb1 / Rb2 * Re / Math.Pow(hfe, 2) - Rb1 / Math.Pow(hfe, 2);
+            return (Icbo * E + hie * Icbo * (-1 / Math.Pow(hfe, 2) - Rb1 / (Rb2 * Math.Pow(hfe, 2)))) / C - 
+                (Icbo * B + hie * Icbo * A - D) / Math.Pow(C, 2) * 
+                (hie * (-1 / Math.Pow(hfe, 2) - Rb1 / (Rb2 * Math.Pow(hfe, 2))) + E);
         }
 
         /// <summary>
@@ -223,9 +239,9 @@ namespace VKR
         /// <returns></returns>
         public double CalculateIc(double hfe, double Tc)
         {
-            double Ic = (-Rc / hfe * Icbo - Rc * Icbo + Rc / Rb2 * InternalVbe - Rc / (Rb2 * hfe) * hie * Icbo - Rc / Rb2 * hie * Icbo - Rb1 / hfe * Icbo - Rb1 * Icbo
-                + Rb1 / Rb2 * InternalVbe - Rb1 / (Rb2 * hfe) * hie * Icbo - Rb1 / Rb2 * hie * Icbo + InternalVbe - 1 / hfe * hie * Icbo - hie * Icbo - Vcc)
-                / (Rc + Rc / hfe + Rc / (Rb2 * hfe) * hie + Rb1 / hfe + Rb1 / (Rb2 * hfe) * hie + 1 / hfe * hie);
+            double Ic = (InternalVbe - 1 / hfe * hie * Icbo - hie * Icbo - Re / hfe * Icbo - Re * Icbo + Rb1 / Rb2 * InternalVbe - Rb1 / (Rb2 * hfe) * hie * Icbo - Rb1 / Rb2
+                * hie * Icbo - Rb1 / Rb2 * Re / hfe * Icbo - Rb1 / Rb2 * Re * Icbo - Rb1 / hfe * Icbo - Rb1 * Icbo - Vcc)
+                / (1 / hfe * hie + Re / hfe + Re + Rb1 / (Rb2 * hfe) * hie + Rb1 / Rb2 * Re / hfe + Rb1 / Rb2 * Re + Rb1 / hfe);
             if (Tc == TcTyp)
             {
                 return Ic * 1000;
