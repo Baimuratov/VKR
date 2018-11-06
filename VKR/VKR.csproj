@@ -215,6 +215,16 @@
     </Content>
     <Content Include="BaseBiasForm.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <None Include="Resources\BaseBias.png" />
+    <None Include="Resources\BaseBiasM.png" />
+    <None Include="Resources\CollectorFB.png" />
+    <None Include="Resources\CollectorFBM.png" />
+    <None Include="Resources\EmitterFB.png" />
+    <None Include="Resources\EmitterFBM.png" />
+    <None Include="Resources\V-FB I-Source.png" />
+    <None Include="Resources\V-FB I-SourceM.png" />
+    <None Include="Resources\V-FB V-Source.png" />
+    <None Include="Resources\V-FB V-SourceM.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -409,6 +419,11 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -443,6 +458,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -335,7 +335,7 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -402,7 +402,7 @@ hr {
 
 p {
   margin: 0 0 10px;
-    text-align: center;
+    text-align: left;
     height: 200px;
 }
 
