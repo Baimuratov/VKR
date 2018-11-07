@@ -14,90 +14,59 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="height: 628px; width: 1210px;" class="auto-style1">
-    
-        <br />
-        <asp:Image ID="Image1" runat="server" ImageUrl="~/BaseBias.png" />
-        <asp:Label ID="Label14" runat="server" style="z-index: 1; left: 911px; top: 141px; position: absolute" Text="max"></asp:Label>
-        <asp:TextBox ID="TcMinTextBox" runat="server" Height="15px" style="z-index: 1; left: 619px; top: 140px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:Label ID="Label11" runat="server" style="z-index: 1; left: 689px; top: 141px; position: absolute" Text="min"></asp:Label>
-        <asp:Label ID="Label12" runat="server" style="z-index: 1; left: 798px; top: 141px; position: absolute" Text="typ"></asp:Label>
-        <asp:Label ID="Label13" runat="server" style="z-index: 1; left: 911px; top: 67px; position: absolute" Text="max"></asp:Label>
-        <asp:Label ID="Label9" runat="server" style="z-index: 1; left: 686px; top: 104px; position: absolute" Text="uA"></asp:Label>
-        <asp:TextBox ID="IcboTextBox" runat="server" Height="15px" style="z-index: 1; left: 619px; top: 103px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:Label ID="Label8" runat="server" style="z-index: 1; left: 572px; top: 103px; position: absolute" Text="I<sub>CBO</sub> ="></asp:Label>
-        <asp:Label ID="Label6" runat="server" style="z-index: 1; left: 797px; top: 67px; position: absolute" Text="typ"></asp:Label>
-        <asp:Label ID="Label5" runat="server" style="z-index: 1; left: 687px; top: 67px; position: absolute" Text="min"></asp:Label>
-        <asp:TextBox ID="hfeTypTextBox" runat="server" Height="15px" style="z-index: 1; left: 731px; top: 66px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:TextBox ID="hfeMaxTextBox" runat="server" Height="15px" style="z-index: 1; left: 843px; top: 66px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:Label ID="Label10" runat="server" style="z-index: 1; left: 572px; top: 140px; position: absolute" Text="T<sub>C</sub> ="></asp:Label>
-        <asp:TextBox ID="hfeMinTextBox" runat="server" Height="15px" style="z-index: 1; left: 619px; top: 66px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:Label ID="Label27" runat="server" style="z-index: 1; left: 648px; top: 186px; position: absolute" Text="Text Changed" Visible="False"></asp:Label>
-        <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 465px; top: 66px; position: absolute" Text="mA"></asp:Label>
-        <asp:Label ID="Label3" runat="server" style="z-index: 1; left: 465px; top: 34px; position: absolute" Text="V"></asp:Label>
-        <asp:TextBox ID="VccTextBox" runat="server" Height="15px" style="z-index: 1; left: 395px; top: 33px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:TextBox ID="IcTextBox" runat="server" Height="15px" style="z-index: 1; left: 277px; top: 150px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:TextBox ID="IccTextBox" runat="server" Height="15px" style="z-index: 1; left: 394px; top: 54px; position: absolute; margin-top: 11px" Width="50px" ReadOnly="True"></asp:TextBox>
-        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 572px; top: 34px; position: absolute" Text="Параметры транзистора"></asp:Label>
-        <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 572px; top: 66px; position: absolute" Text="h<sub>FE</sub> ="></asp:Label>
-        &nbsp;<asp:TextBox ID="RcTextBox" runat="server" Height="15px" style="z-index: 1; left: 69px; top: 96px; position: absolute" Width="70px" ReadOnly="True"></asp:TextBox>
-        <asp:TextBox ID="RbTextBox" runat="server" Height="15px" style="position: absolute; z-index: 1; left: 70px; top: 164px" Width="70px" ReadOnly="True"></asp:TextBox>
-        <asp:Label ID="Label25" runat="server" style="z-index: 1; left: 154px; top: 97px; position: absolute" Text="Ом"></asp:Label>
-        <asp:TextBox ID="TcTypTextBox" runat="server" Height="15px" style="z-index: 1; left: 732px; top: 140px; position: absolute" Width="50px" ReadOnly="True"></asp:TextBox>
-        <asp:Label ID="Label16" runat="server" style="z-index: 1; left: 683px; top: 235px; position: absolute" Text="V"></asp:Label>
-        <asp:TextBox ID="TcMaxTextBox" runat="server" Height="15px" style="z-index: 1; left: 844px; top: 140px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:TextBox ID="VbeTextBox" runat="server" Height="15px" style="z-index: 1; left: 616px; top: 235px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:TextBox ID="dhFETextBox" runat="server" Height="15px" style="z-index: 1; left: 616px; top: 270px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:TextBox ID="dVbeTextBox" runat="server" Height="15px" style="z-index: 1; left: 616px; top: 306px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:TextBox ID="dIcboTextBox" runat="server" Height="15px" style="z-index: 1; left: 616px; top: 342px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:Label ID="Label17" runat="server" style="z-index: 1; left: 541px; top: 271px; position: absolute" Text="δh<sub>FE</sub>/δT = "></asp:Label>
-        <asp:Label ID="Label18" runat="server" style="z-index: 1; left: 683px; top: 272px; position: absolute" Text="%/°C‪‪"></asp:Label>
-        <asp:Label ID="Label19" runat="server" style="z-index: 1; left: 540px; top: 305px; position: absolute" Text="δV'<sub>BE</sub>/δT = "></asp:Label>
-        <asp:Label ID="Label20" runat="server" style="z-index: 1; left: 683px; top: 306px; position: absolute" Text="mV/°C"></asp:Label>
-        <asp:Label ID="Label21" runat="server" style="z-index: 1; left: 499px; top: 341px; position: absolute" Text="δ<sub>CBO</sub>/δT factor = "></asp:Label>
-        <asp:Label ID="Label22" runat="server" style="z-index: 1; left: 683px; top: 342px; position: absolute" Text="/10°C"></asp:Label>
-        <asp:Label ID="Label26" runat="server" style="z-index: 1; left: 154px; top: 165px; position: absolute" Text="Ом"></asp:Label>
-        <asp:Button ID="CalculateButton" runat="server" OnClick="CalculateButton_Click" style="z-index: 1; left: 23px; top: 604px; position: absolute" Text="Рассчитать" />
-        <asp:TextBox ID="VceTextBox" runat="server" Height="15px" style="z-index: 1; left: 314px; top: 214px; position: absolute" Width="50px"></asp:TextBox>
-        <asp:Label ID="Label28" runat="server" style="z-index: 1; left: 346px; top: 151px; position: absolute" Text="mA"></asp:Label>
-        <asp:Label ID="Label29" runat="server" style="z-index: 1; left: 382px; top: 214px; position: absolute" Text="V"></asp:Label>
+    <div style="height: 798px; width: 1210px;" class="auto-style1">
+        <h2>Смещение с общей базой</h2>
+        <div style="height: 414px">
+            <img src="Resources/BaseBias.png" style="z-index: 1; left: 10px; top: 60px; position: absolute" />
+            <asp:Label ID="mA1Label" runat="server" style="z-index: 1; left: 439px; top: 90px; position: absolute" Text="mA"></asp:Label>
+            <asp:Label ID="V1Label" runat="server" style="z-index: 1; left: 439px; top: 58px; position: absolute" Text="V"></asp:Label>
+            <asp:TextBox ID="VccTextBox" runat="server" Height="15px" style="z-index: 1; left: 375px; top: 56px; position: absolute" Width="50px"></asp:TextBox>
+            <asp:TextBox ID="IcTextBox" runat="server" Height="15px" style="z-index: 1; left: 274px; top: 173px; position: absolute" Width="50px"></asp:TextBox>
+            <asp:TextBox ID="IccTextBox" runat="server" Height="15px" style="z-index: 1; left: 375px; top: 77px; position: absolute; margin-top: 11px" Width="50px" ReadOnly="True"></asp:TextBox>
+            <asp:TextBox ID="RcTextBox" runat="server" Height="15px" style="z-index: -1; left: 76px; top: 122px; position: absolute" Width="70px" ReadOnly="True"></asp:TextBox>
+            <asp:TextBox ID="RbTextBox" runat="server" Height="15px" style="position: absolute; z-index: 1; left: 76px; top: 196px" Width="70px" ReadOnly="True"></asp:TextBox>
+            <asp:TextBox ID="VceTextBox" runat="server" Height="15px" style="z-index: 1; left: 311px; top: 235px; position: absolute" Width="50px"></asp:TextBox>
+            <asp:Label ID="mA2Label" runat="server" style="z-index: 1; left: 338px; top: 173px; position: absolute" Text="mA"></asp:Label>
+            <asp:Label ID="V2Label" runat="server" style="z-index: 1; left: 375px; top: 236px; position: absolute" Text="V"></asp:Label>
+            <asp:Label ID="Ohm1Label" runat="server" style="z-index: 1; left: 160px; top: 124px; position: absolute" Text="Ом"></asp:Label><asp:Label ID="Ohm2Label" runat="server" style="z-index: 1; left: 160px; top: 198px; position: absolute" Text="Ом"></asp:Label>
+            <asp:Label ID="RcLabel" runat="server" style="z-index: 1; left: 38px; top: 122px; position: absolute; bottom: 224px;" Text="R<sub>C</sub> = "></asp:Label>
+            <asp:Label ID="RbLabel" runat="server" style="z-index: 1; left: 37px; top: 196px; position: absolute" Text="R<sub>B</sub> = "></asp:Label>
+            <asp:Label ID="VceLabel" runat="server" style="z-index: 1; left: 265px; top: 235px; position: absolute" Text="V<sub>CE</sub> = "></asp:Label>
+            <asp:Label ID="IcLabel" runat="server" style="z-index: 1; left: 241px; top: 173px; position: absolute" Text="I<sub>C</sub> = "></asp:Label>
+            <asp:Label ID="VccLabel" runat="server" style="z-index: 1; left: 329px; top: 56px; position: absolute" Text="V<sub>CC</sub> = "></asp:Label>
+            <asp:Label ID="IccLabel" runat="server" style="z-index: 1; left: 329px; top: 88px; position: absolute" Text="I<sub>CC</sub> = "></asp:Label>
+        </div>
+        <asp:Label ID="StabilityTableLabel" runat="server" style="z-index: 1; left: 443px; top: 478px; position: absolute" Text="Анализ стабильности"></asp:Label>
+        <asp:Label ID="IcTableLabel" runat="server" Text="Ток коллектора, I<sub>C</sub> (mA)"></asp:Label>
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <asp:Label ID="Label24" runat="server" style="z-index: 1; left: 441px; top: 413px; position: absolute" Text="Анализ стабильности"></asp:Label>
-        <br />
-        <asp:Label ID="Label23" runat="server" Text="Ток коллектора, I<sub>C</sub> (mA)"></asp:Label>
-        <br />
-        <asp:Table ID="IcTable" runat="server" GridLines="Both" Height="90px" Width="171px">
-            <asp:TableRow runat="server" BackColor="#EEEEF2" HorizontalAlign="Center" VerticalAlign="Middle">
-                <asp:TableCell runat="server">h<sub>FE</sub> = </asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
+        <asp:Table ID="IcTable" runat="server" GridLines="Both">
+            <asp:TableRow runat="server" BackColor="#EEEEF2" HorizontalAlign="Center" VerticalAlign="Middle" Height="24px">
+                <asp:TableCell runat="server" Width="50px">h<sub>FE</sub> = </asp:TableCell>
+                <asp:TableCell runat="server" Width="50px"></asp:TableCell>
+                <asp:TableCell runat="server" Width="50px"></asp:TableCell>
+                <asp:TableCell runat="server" Width="50px"></asp:TableCell>
             </asp:TableRow>
-            <asp:TableRow ID="TcMin" runat="server" HorizontalAlign="Center" VerticalAlign="Middle">
+            <asp:TableRow ID="TcMin" runat="server" HorizontalAlign="Center" VerticalAlign="Middle" Height="24px">
                 <asp:TableCell runat="server" BackColor="#EEEEF2"></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
-            <asp:TableRow ID="TcTyp" runat="server" HorizontalAlign="Center" VerticalAlign="Middle">
+            <asp:TableRow ID="TcTyp" runat="server" HorizontalAlign="Center" VerticalAlign="Middle" Height="24px">
                 <asp:TableCell runat="server" BackColor="#EEEEF2"></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
-            <asp:TableRow ID="TcMax" runat="server" HorizontalAlign="Center" VerticalAlign="Middle">
+            <asp:TableRow ID="TcMax" runat="server" HorizontalAlign="Center" VerticalAlign="Middle" Height="24px">
                 <asp:TableCell runat="server" BackColor="#EEEEF2"></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <asp:Label ID="Label15" runat="server" style="z-index: 1; left: 565px; top: 236px; position: absolute" Text="V<sub>BE</sub> = "></asp:Label>
-        <asp:Table ID="STable" runat="server" GridLines="Both" style="z-index: 1; left: 443px; top: 439px; position: absolute; height: 25px; width: 434px">
+        <asp:Table ID="STable" runat="server" GridLines="Both" style="z-index: 1; left: 443px; top: 512px; position: absolute; height: 25px; width: 434px">
             <asp:TableRow ID="Head" runat="server" BackColor="#EEEEF2" BorderWidth="1px" HorizontalAlign="Center" VerticalAlign="Middle">
                 <asp:TableCell runat="server"></asp:TableCell>
                 <asp:TableCell runat="server">Стабилизирующие факторы</asp:TableCell>
@@ -124,7 +93,58 @@
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        </div> 
+        </div>
+        <div style="width: 380px; height: 171px; z-index: 1; left: 553px; top: 62px; position: absolute">
+            Параметры транзистора<br />
+            <br />
+            <div style="width: 59px; text-align: right; height: 120px; z-index: 1; left: 0px; top: 38px; position: absolute;">
+                h<sub>FE</sub> = <br />
+                <br />
+                I<sub>CBO</sub> =<br />
+                <br />
+                T<sub>C</sub> =<br />
+            </div>
+            <div style="width: 307px; position: absolute; top: 38px; left: 66px; z-index: 1; height: 124px">
+                <asp:TextBox ID="hfeMinTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox> &nbsp;min&nbsp; 
+                <asp:TextBox ID="hfeTypTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox> &nbsp;typ&nbsp;
+                <asp:TextBox ID="hfeMaxTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox> &nbsp;max<br />
+                <br />
+                <asp:TextBox ID="IcboTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>&nbsp;uA<br />
+                <br />
+                <asp:TextBox ID="TcMinTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+                &nbsp;min&nbsp;
+                <asp:TextBox ID="TcTypTextBox" runat="server" Height="15px" Width="50px" ReadOnly="True"></asp:TextBox>
+                &nbsp;typ&nbsp;
+                <asp:TextBox ID="TcMaxTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+                &nbsp;max °C
+            </div>
+        </div>     
+        <div style="height: 210px; width: 250px; z-index: 1; left: 553px; top: 246px; position: absolute">
+        Правила проектирования<br />
+            <br />
+            <div style="width: 115px; text-align: right">
+
+                V<sub>BE</sub> =<br />
+                <br />
+                δh<sub>FE</sub>/δT =<br />
+                <br />
+                δV'<sub>BE</sub>/δT =<br />
+                <br />
+                δ<sub>CBO</sub>/δT factor =</div>
+            <div style="width: 123px; height: 161px; z-index: 1; left: 119px; top: 37px; position: absolute; right: 74px">
+                <asp:TextBox ID="VbeTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+                &nbsp;V<br />
+                <br />
+                <asp:TextBox ID="dhFETextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+                &nbsp;%/°C‪‪<br />
+                <br />
+                <asp:TextBox ID="dVbeTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+                &nbsp;mV/°C<br />
+                <br />
+                <asp:TextBox ID="dIcboTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+            &nbsp;/10°C</div>
+        </div>
+        <asp:Button ID="CalculateButton" runat="server" OnClick="CalculateButton_Click" style="z-index: 1; left: 23px; top: 646px; position: absolute" Text="Рассчитать" />
     </form>
 </body>
 </html>
