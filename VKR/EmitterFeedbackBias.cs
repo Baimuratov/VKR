@@ -180,17 +180,6 @@ namespace VKR
         }
 
         /// <summary>
-        /// Сопротивление коллектора
-        /// </summary>
-        public double Rc
-        {
-            get
-            {
-                return (Vcc - Vce) / (Ic + Ib + Ib2);
-            }
-        }
-
-        /// <summary>
         /// Коэффициент стабилизации для теплового тока
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
@@ -239,7 +228,7 @@ namespace VKR
         /// <returns></returns>
         public double CalculateIc(double hfe, double Tc)
         {
-            double Ic = (InternalVbe - 1 / hfe * hie * Icbo - hie * Icbo - Re / hfe * Icbo - Re * Icbo + Rb1 / Rb2 * InternalVbe - Rb1 / (Rb2 * hfe) * hie * Icbo - Rb1 / Rb2
+            double Ic = -1* (InternalVbe - 1 / hfe * hie * Icbo - hie * Icbo - Re / hfe * Icbo - Re * Icbo + Rb1 / Rb2 * InternalVbe - Rb1 / (Rb2 * hfe) * hie * Icbo - Rb1 / Rb2
                 * hie * Icbo - Rb1 / Rb2 * Re / hfe * Icbo - Rb1 / Rb2 * Re * Icbo - Rb1 / hfe * Icbo - Rb1 * Icbo - Vcc)
                 / (1 / hfe * hie + Re / hfe + Re + Rb1 / (Rb2 * hfe) * hie + Rb1 / Rb2 * Re / hfe + Rb1 / Rb2 * Re + Rb1 / hfe);
             if (Tc == TcTyp)

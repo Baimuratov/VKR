@@ -10,7 +10,7 @@
 namespace VKR {
     
     
-    public partial class WebForm1 {
+    public partial class VoltageFeedbackBiasForm {
         
         /// <summary>
         /// form1 элемент управления.

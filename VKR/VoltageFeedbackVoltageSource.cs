@@ -223,7 +223,7 @@ namespace VKR
         /// <returns></returns>
         public double CalculateIc(double hfe, double Tc)
         {
-            double Ic = (-Rc / hfe * Icbo - Rc * Icbo + Rc / Rb2 * InternalVbe - Rc / (Rb2 * hfe) * hie * Icbo - Rc / Rb2 * hie * Icbo - Rb1 / hfe * Icbo - Rb1 * Icbo
+            double Ic = -1 * (-Rc / hfe * Icbo - Rc * Icbo + Rc / Rb2 * InternalVbe - Rc / (Rb2 * hfe) * hie * Icbo - Rc / Rb2 * hie * Icbo - Rb1 / hfe * Icbo - Rb1 * Icbo
                 + Rb1 / Rb2 * InternalVbe - Rb1 / (Rb2 * hfe) * hie * Icbo - Rb1 / Rb2 * hie * Icbo + InternalVbe - 1 / hfe * hie * Icbo - hie * Icbo - Vcc)
                 / (Rc + Rc / hfe + Rc / (Rb2 * hfe) * hie + Rb1 / hfe + Rb1 / (Rb2 * hfe) * hie + 1 / hfe * hie);
             if (Tc == TcTyp)

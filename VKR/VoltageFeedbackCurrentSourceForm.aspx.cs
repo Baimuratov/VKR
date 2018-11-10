@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace VKR
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class VoltageFeedbackCurrentSourceForm : System.Web.UI.Page
     {
-        BaseBias scheme = new BaseBias();
+        VoltageFeedbackCurrentSource scheme = new VoltageFeedbackCurrentSource();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,13 +29,16 @@ namespace VKR
             scheme.dVbe = -0.002;
             scheme.dIcbo = 2;
 
-            VccTextBox.Text = scheme.Vcc.ToString("0.00");
-            IcTextBox.Text = Convert.ToString(scheme.Ic * 1000);
-            VceTextBox.Text = scheme.Vce.ToString("0.00");
+            VccTextBox.Text = scheme.Vcc.ToString();
+            IcTextBox.Text = (scheme.Ic * 1000).ToString();
+            a1TextBox.Text = "0,75";
+            a2TextBox.Text = "0,1";
+
+            VceTextBox.Text = scheme.Vce.ToString();
             hfeMinTextBox.Text = scheme.hfeMin.ToString();
             hfeTypTextBox.Text = scheme.hfeTyp.ToString();
             hfeMaxTextBox.Text = scheme.hfeMax.ToString();
-            IcboTextBox.Text = Convert.ToString(scheme.Icbo * 1000000);
+            IcboTextBox.Text = (scheme.Icbo * 1000000).ToString();
             TcMinTextBox.Text = scheme.TcMin.ToString();
             TcTypTextBox.Text = scheme.TcTyp.ToString();
             TcMaxTextBox.Text = scheme.TcMax.ToString();
@@ -49,7 +52,7 @@ namespace VKR
         {
             // Считывание полей
             scheme.Vcc = Convert.ToDouble(VccTextBox.Text);
-            scheme.Ic = Convert.ToDouble(IcTextBox.Text)/1000;
+            scheme.Ic = Convert.ToDouble(IcTextBox.Text) / 1000;
             scheme.Vce = Convert.ToDouble(VceTextBox.Text);
             scheme.hfeMin = Convert.ToDouble(hfeMinTextBox.Text);
             scheme.hfeTyp = Convert.ToDouble(hfeTypTextBox.Text);
@@ -63,11 +66,19 @@ namespace VKR
             scheme.dIcbo = Convert.ToDouble(dIcboTextBox.Text);
 
             // Расчёт параметров
+            scheme.Vrb2 = Convert.ToDouble(a1TextBox.Text) * scheme.Vce;
+            scheme.Ib2 = Convert.ToDouble(a2TextBox.Text) * scheme.Ic;
+
             double IcMin = scheme.CalculateIc(scheme.hfeMin, scheme.TcMin);
             double IcMax = scheme.CalculateIc(scheme.hfeMax, scheme.TcMax);
 
             RbTextBox.Text = scheme.Rb.ToString();
+            Rb1TextBox.Text = scheme.Rb1.ToString("0.");
+            Rb2TextBox.Text = scheme.Rb2.ToString();
             RcTextBox.Text = scheme.Rc.ToString();
+
+            Vrb2TextBox.Text = scheme.Vrb2.ToString();
+            Irb2TextBox.Text = (scheme.Ib2 * 1000).ToString();
 
             IcTable.Rows[0].Cells[1].Text = scheme.hfeMin.ToString();
             IcTable.Rows[0].Cells[2].Text = scheme.hfeTyp.ToString();

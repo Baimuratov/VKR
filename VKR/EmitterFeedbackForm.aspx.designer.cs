@@ -10,7 +10,7 @@
 namespace VKR {
     
     
-    public partial class WebForm1 {
+    public partial class EmitterFeedbackForm {
         
         /// <summary>
         /// form1 элемент управления.
@@ -67,22 +67,13 @@ namespace VKR {
         protected global::System.Web.UI.WebControls.TextBox IccTextBox;
         
         /// <summary>
-        /// RcTextBox элемент управления.
+        /// ReTextBox элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RcTextBox;
-        
-        /// <summary>
-        /// RbTextBox элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RbTextBox;
+        protected global::System.Web.UI.WebControls.TextBox ReTextBox;
         
         /// <summary>
         /// VceTextBox элемент управления.
@@ -121,31 +112,13 @@ namespace VKR {
         protected global::System.Web.UI.WebControls.Label Ohm1Label;
         
         /// <summary>
-        /// Ohm2Label элемент управления.
+        /// ReLabel элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Ohm2Label;
-        
-        /// <summary>
-        /// RcLabel элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RcLabel;
-        
-        /// <summary>
-        /// RbLabel элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RbLabel;
+        protected global::System.Web.UI.WebControls.Label ReLabel;
         
         /// <summary>
         /// VceLabel элемент управления.
@@ -182,6 +155,78 @@ namespace VKR {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label IccLabel;
+        
+        /// <summary>
+        /// Rb1TextBox элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Rb1TextBox;
+        
+        /// <summary>
+        /// Rb1Label элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Rb1Label;
+        
+        /// <summary>
+        /// Ohm3Label элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Ohm3Label;
+        
+        /// <summary>
+        /// Rb2TextBox элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Rb2TextBox;
+        
+        /// <summary>
+        /// Rb2Label элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Rb2Label;
+        
+        /// <summary>
+        /// Ohm4Label элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Ohm4Label;
+        
+        /// <summary>
+        /// VbeLabel элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label VbeLabel;
+        
+        /// <summary>
+        /// Irb2Label элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Irb2Label;
         
         /// <summary>
         /// hfeMinTextBox элемент управления.
@@ -245,6 +290,24 @@ namespace VKR {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TcMaxTextBox;
+        
+        /// <summary>
+        /// a2TextBox элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox a2TextBox;
+        
+        /// <summary>
+        /// Irb2TextBox элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Irb2TextBox;
         
         /// <summary>
         /// VbeTextBox элемент управления.

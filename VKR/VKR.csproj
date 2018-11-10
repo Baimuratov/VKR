@@ -200,11 +200,11 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BaseBias.png" />
     <Content Include="BaseBias.svg" />
-    <Content Include="CollectorFBForm.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="EmitterFeedbackForm.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -259,6 +259,9 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="VoltageFeedbackBiasForm.aspx" />
+    <Content Include="VoltageFeedbackCurrentSourceForm.aspx" />
+    <Content Include="VoltageFeedbackVoltageSourceForm.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -390,14 +393,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="BaseBias.cs" />
-    <Compile Include="CollectorFB.cs" />
-    <Compile Include="CollectorFBForm.aspx.cs">
-      <DependentUpon>CollectorFBForm.aspx</DependentUpon>
+    <Compile Include="EmitterFeedbackForm.aspx.cs">
+      <DependentUpon>EmitterFeedbackForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CollectorFBForm.aspx.designer.cs">
-      <DependentUpon>CollectorFBForm.aspx</DependentUpon>
+    <Compile Include="EmitterFeedbackForm.aspx.designer.cs">
+      <DependentUpon>EmitterFeedbackForm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="VoltageFeedbackBias.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -453,8 +456,29 @@
     <Compile Include="BaseBiasForm.aspx.designer.cs">
       <DependentUpon>BaseBiasForm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="VoltageFeedbackBiasForm.aspx.cs">
+      <DependentUpon>VoltageFeedbackBiasForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VoltageFeedbackBiasForm.aspx.designer.cs">
+      <DependentUpon>VoltageFeedbackBiasForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="VoltageFeedbackCurrentSource.cs" />
+    <Compile Include="VoltageFeedbackCurrentSourceForm.aspx.cs">
+      <DependentUpon>VoltageFeedbackCurrentSourceForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VoltageFeedbackCurrentSourceForm.aspx.designer.cs">
+      <DependentUpon>VoltageFeedbackCurrentSourceForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="VoltageFeedbackVoltageSource.cs" />
+    <Compile Include="VoltageFeedbackVoltageSourceForm.aspx.cs">
+      <DependentUpon>VoltageFeedbackVoltageSourceForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VoltageFeedbackVoltageSourceForm.aspx.designer.cs">
+      <DependentUpon>VoltageFeedbackVoltageSourceForm.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

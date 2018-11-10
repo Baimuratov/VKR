@@ -5,7 +5,7 @@ using System.Web;
 
 namespace VKR
 {
-    public class CollectorFB
+    public class VoltageFeedbackBias
     {
         /// <summary>
         /// Номинальный ток коллектора

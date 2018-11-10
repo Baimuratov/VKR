@@ -170,7 +170,7 @@ namespace VKR
         {
             get
             {
-                return (Vce - Rb2) / (Ib + Ib2);
+                return (Vce - Vrb2) / (Ib + Ib2);
             }
         }
 

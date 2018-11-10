@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace VKR
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class VoltageFeedbackBiasForm : System.Web.UI.Page
     {
-        BaseBias scheme = new BaseBias();
+        VoltageFeedbackBias scheme = new VoltageFeedbackBias();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -49,7 +49,7 @@ namespace VKR
         {
             // Считывание полей
             scheme.Vcc = Convert.ToDouble(VccTextBox.Text);
-            scheme.Ic = Convert.ToDouble(IcTextBox.Text)/1000;
+            scheme.Ic = Convert.ToDouble(IcTextBox.Text) / 1000;
             scheme.Vce = Convert.ToDouble(VceTextBox.Text);
             scheme.hfeMin = Convert.ToDouble(hfeMinTextBox.Text);
             scheme.hfeTyp = Convert.ToDouble(hfeTypTextBox.Text);
