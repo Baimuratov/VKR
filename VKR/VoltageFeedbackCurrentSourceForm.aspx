@@ -15,12 +15,12 @@
         <div style="height: 339px">
             &nbsp;<asp:Label ID="mA1Label" runat="server" style="z-index: 1; left: 605px; top: 160px; position: absolute" Text="мА"></asp:Label>
             <asp:Label ID="V1Label" runat="server" style="z-index: 1; left: 605px; top: 124px; position: absolute" Text="В"></asp:Label>
-            <asp:TextBox ID="VccTextBox" runat="server" Height="15px" style="z-index: 1; left: 541px; top: 122px; position: absolute" Width="50px"></asp:TextBox>
-            <asp:TextBox ID="IcTextBox" runat="server" Height="15px" style="z-index: 1; left: 351px; top: 194px; position: absolute" Width="50px"></asp:TextBox>
+            <asp:TextBox ID="VccTextBox" runat="server" Height="15px" style="z-index: 1; left: 541px; top: 122px; position: absolute" Width="50px">2,7</asp:TextBox>
+            <asp:TextBox ID="IcTextBox" runat="server" Height="15px" style="z-index: 1; left: 351px; top: 194px; position: absolute" Width="50px">5</asp:TextBox>
             <asp:TextBox ID="IccTextBox" runat="server" Height="15px" style="z-index: 1; left: 541px; top: 148px; position: absolute; margin-top: 11px" Width="50px" ReadOnly="True"></asp:TextBox>
             <asp:TextBox ID="RcTextBox" runat="server" Height="15px" style="z-index: -1; left: 356px; top: 93px; position: absolute" Width="70px" ReadOnly="True"></asp:TextBox>
             <asp:TextBox ID="RbTextBox" runat="server" Height="15px" style="position: absolute; z-index: 1; left: 143px; top: 238px" Width="70px" ReadOnly="True"></asp:TextBox>
-            <asp:TextBox ID="VceTextBox" runat="server" Height="15px" style="z-index: 1; left: 384px; top: 267px; position: absolute; right: 229px;" Width="50px"></asp:TextBox>
+            <asp:TextBox ID="VceTextBox" runat="server" Height="15px" style="z-index: 1; left: 384px; top: 267px; position: absolute; right: 229px;" Width="50px">2</asp:TextBox>
             <asp:Label ID="mA2Label" runat="server" style="z-index: 1; left: 415px; top: 195px; position: absolute" Text="мА"></asp:Label>
             <asp:Label ID="V2Label" runat="server" style="z-index: 1; left: 448px; top: 268px; position: absolute" Text="В"></asp:Label>
             <asp:Label ID="Ohm1Label" runat="server" style="z-index: 1; left: 440px; top: 94px; position: absolute" Text="Ом"></asp:Label><asp:Label ID="Ohm2Label" runat="server" style="z-index: 1; left: 227px; top: 239px; position: absolute" Text="Ом"></asp:Label>
@@ -31,10 +31,10 @@
             <asp:Label ID="VccLabel" runat="server" style="z-index: 1; left: 494px; top: 122px; position: absolute" Text="V<sub>CC</sub> = "></asp:Label>
             <asp:Label ID="IccLabel" runat="server" style="z-index: 1; left: 494px; top: 159px; position: absolute" Text="I<sub>CC</sub> = "></asp:Label>
             <img src="Resources/V-FB%20I-Source.png" style="z-index: -4; left: 60px; top: 122px; position: absolute" /><asp:Label ID="Vrb2Label" runat="server" style="z-index: 1; left: 25px; top: 258px; position: absolute" Text="V<sub>RB2</sub>"></asp:Label>
-                <asp:TextBox ID="Rb1TextBox" runat="server" Height="15px" style="z-index: 1; left: 143px; top: 93px; position: absolute" Width="70px"></asp:TextBox>
+                <asp:TextBox ID="Rb1TextBox" runat="server" Height="15px" style="z-index: 1; left: 143px; top: 93px; position: absolute" Width="70px" ReadOnly="True"></asp:TextBox>
             <asp:Label ID="Rb1Label" runat="server" style="z-index: 1; left: 97px; top: 93px; position: absolute" Text="R<sub>B1</sub> = "></asp:Label>
             <asp:Label ID="Ohm3Label" runat="server" style="z-index: 1; left: 227px; top: 94px; position: absolute" Text="Ом"></asp:Label>
-            <asp:TextBox ID="Rb2TextBox" runat="server" Height="15px" style="z-index: 1; left: 143px; top: 338px; position: absolute" Width="70px"></asp:TextBox>
+            <asp:TextBox ID="Rb2TextBox" runat="server" Height="15px" style="z-index: 1; left: 143px; top: 338px; position: absolute" Width="70px" ReadOnly="True"></asp:TextBox>
             <asp:Label ID="Rb2Label" runat="server" style="z-index: 1; left: 97px; top: 338px; position: absolute" Text="R<sub>B2</sub> = "></asp:Label>
             <asp:Label ID="Ohm4Label" runat="server" style="z-index: 1; left: 227px; top: 338px; position: absolute" Text="Ом"></asp:Label>
             <asp:Label ID="VbeLabel" runat="server" style="z-index: 1; left: 227px; top: 299px; position: absolute" Text="V<sub>BE</sub>"></asp:Label>
@@ -56,17 +56,17 @@
                 T<sub>C</sub> =<br />
             </div>
             <div style="width: 307px; position: absolute; top: 38px; left: 66px; z-index: 1; height: 124px">
-                <asp:TextBox ID="hfeMinTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox> &nbsp;min&nbsp; 
-                <asp:TextBox ID="hfeTypTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox> &nbsp;typ&nbsp;
-                <asp:TextBox ID="hfeMaxTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox> &nbsp;max<br />
+                <asp:TextBox ID="hfeMinTextBox" runat="server" Height="15px" Width="50px">50</asp:TextBox> &nbsp;min&nbsp; 
+                <asp:TextBox ID="hfeTypTextBox" runat="server" Height="15px" Width="50px">80</asp:TextBox> &nbsp;typ&nbsp;
+                <asp:TextBox ID="hfeMaxTextBox" runat="server" Height="15px" Width="50px">150</asp:TextBox> &nbsp;max<br />
                 <br />
-                <asp:TextBox ID="IcboTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>&nbsp;мкА<br />
+                <asp:TextBox ID="IcboTextBox" runat="server" Height="15px" Width="50px">0,1</asp:TextBox>&nbsp;мкА<br />
                 <br />
-                <asp:TextBox ID="TcMinTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+                <asp:TextBox ID="TcMinTextBox" runat="server" Height="15px" Width="50px">-25</asp:TextBox>
                 &nbsp;min&nbsp;
-                <asp:TextBox ID="TcTypTextBox" runat="server" Height="15px" Width="50px" ReadOnly="True"></asp:TextBox>
+                <asp:TextBox ID="TcTypTextBox" runat="server" Height="15px" Width="50px" ReadOnly="True">25</asp:TextBox>
                 &nbsp;typ&nbsp;
-                <asp:TextBox ID="TcMaxTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+                <asp:TextBox ID="TcMaxTextBox" runat="server" Height="15px" Width="50px">65</asp:TextBox>
                 &nbsp;max °C
             </div>
         </div>     
@@ -86,24 +86,24 @@
                 <br />
                 </div>
             <div style="width: 358px; height: 181px; z-index: 1; left: 119px; top: 37px; position: absolute; right: 29px">
-                <asp:TextBox ID="a1TextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+                <asp:TextBox ID="a1TextBox" runat="server" Height="15px" Width="50px">0,75</asp:TextBox>
 &nbsp;x V<sub>CE</sub> =
                 <asp:TextBox ID="Vrb2TextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
 &nbsp;В<br />
                 <br />
-                <asp:TextBox ID="a2TextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+                <asp:TextBox ID="a2TextBox" runat="server" Height="15px" Width="50px">0,1</asp:TextBox>
 &nbsp;x&nbsp;&nbsp;&nbsp; I<sub>C</sub> =
                 <asp:TextBox ID="Irb2TextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
 &nbsp;мА<br />
                 <br />
-                <asp:TextBox ID="VbeTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
-                &nbsp;В&nbsp;&nbsp;&nbsp; δI<sub>CBO</sub>/δT factor = <asp:TextBox ID="dIcboTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+                <asp:TextBox ID="VbeTextBox" runat="server" Height="15px" Width="50px">0,78</asp:TextBox>
+                &nbsp;В&nbsp;&nbsp;&nbsp; δI<sub>CBO</sub>/δT factor = <asp:TextBox ID="dIcboTextBox" runat="server" Height="15px" Width="50px">2</asp:TextBox>
             &nbsp;/10°C<br />
                 <br />
-                <asp:TextBox ID="dVbeTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+                <asp:TextBox ID="dVbeTextBox" runat="server" Height="15px" Width="50px">-2</asp:TextBox>
                 &nbsp;мВ/°C&nbsp;&nbsp;&nbsp;
                 δh<sub>FE</sub>/δT =
-                <asp:TextBox ID="dhFETextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
+                <asp:TextBox ID="dhFETextBox" runat="server" Height="15px" Width="50px">0,5</asp:TextBox>
                 &nbsp;%/°C‪‪<br />
                 <br />
                 </div>
