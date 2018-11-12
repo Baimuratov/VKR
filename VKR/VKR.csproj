@@ -214,6 +214,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="BaseBiasForm.aspx" />
+    <Content Include="ClassDiagram.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Resources\BaseBias.png" />
     <None Include="Resources\BaseBiasM.png" />

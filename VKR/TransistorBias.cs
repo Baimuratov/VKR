@@ -5,6 +5,9 @@ using System.Web;
 
 namespace VKR
 {
+    /// <summary>
+    /// Содержит общие параметры для разных типов смещений транзисторов
+    /// </summary>
     abstract public class TransistorBias
     {
         /// <summary>
@@ -130,25 +133,25 @@ namespace VKR
         }
 
         /// <summary>
-        /// Коэффициент стабилизации для теплового тока
+        /// Вычисляет коэффициент стабилизации для теплового тока
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <returns></returns>
+        /// <returns>Коэффициент стабилизации для теплового тока</returns>
         abstract public double SIcbo(double hfe);
 
 
         /// <summary>
-        /// Коэффициент стабилизации для напряжения отсечки
+        /// Вычисляет коэффициент стабилизации для напряжения отсечки
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <returns></returns>
+        /// <returns>Коэффициент стабилизации для напряжения отсечки</returns>
         abstract public double SInternalVbe(double hfe);
 
         /// <summary>
-        /// Коэффициент стабилизации для коэффициента усиления тока коллектора 
+        /// Вычисляет коэффициент стабилизации для коэффициента усиления тока коллектора
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <returns></returns>
+        /// <returns>Коэффициент стабилизации для усиления тока коллектора</returns>
         abstract public double Shfe(double hfe);
 
 

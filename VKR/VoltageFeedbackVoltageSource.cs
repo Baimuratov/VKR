@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace VKR
 {
-    public class VoltageFeedbackVoltageSource
+    /// <summary>
+    /// Содержит параметры для смещения биполярного транзистора 
+    /// с обратным напряжением с источником напряжения
+    /// </summary>
+    public class VoltageFeedbackVoltageSource : TransistorBias
     {
-        /// <summary>
-        /// Номинальный ток коллектора
-        /// </summary>
-        public double Ic
-        { get; set; }
-
         /// <summary>
         /// Ток на втором базовом сопротивлении
         /// </summary>
@@ -20,129 +15,13 @@ namespace VKR
         { get; set; }
 
         /// <summary>
-        /// Напряжение питания
-        /// </summary>
-        public double Vcc
-        { get; set; }
-
-        /// <summary>
-        /// Напряжение коллектор-эмиттер
-        /// </summary>
-        public double Vce
-        { get; set; }
-
-        /// <summary>
-        /// Напряжение на втором базовом сопротивлении
+        /// Напряжение на втором базовом сопротивлении, В
         /// </summary>
         public double Vrb2
         { get; set; }
 
         /// <summary>
-        /// Коэффициент усиления тока коллектора, минимальное значение
-        /// </summary>
-        public double hfeMin
-        { get; set; }
-
-        /// <summary>
-        /// Коэффициент усиления тока коллектора, нормальное значение
-        /// </summary>
-        public double hfeTyp
-        { get; set; }
-
-        /// <summary>
-        /// Коэффициент усиления тока коллектора, максимальное значение
-        /// </summary>
-        public double hfeMax
-        { get; set; }
-
-        /// <summary>
-        /// Тепловой ток
-        /// </summary>
-        public double Icbo
-        { get; set; }
-
-        /// <summary>
-        /// Температура транзистора, минимальное значение
-        /// </summary>
-        public double TcMin
-        { get; set; }
-
-        /// <summary>
-        /// Температура транзистора, нормальное значение
-        /// </summary>
-        public double TcTyp
-        {
-            get
-            {
-                return 25;
-            }
-        }
-
-        /// <summary>
-        /// Температура транзистора, максимальное значение
-        /// </summary>
-        public double TcMax
-        { get; set; }
-
-        /// <summary>
-        /// Напряжение между базой и эмиттером
-        /// </summary>
-        public double Vbe
-        { get; set; }
-
-        /// <summary>
-        /// Скорость изменения коэффициента усиления при изменении температуры, %/C
-        /// </summary>
-        public double dhfe
-        { get; set; }
-
-        /// <summary>
-        /// Скорость изменения напряжения отсечки при изменении температуры, V/C
-        /// </summary>
-        public double dVbe
-        { get; set; }
-
-        /// <summary>
-        /// Скорость изменения теплового тока при изменении температуры, /10 C
-        /// </summary>
-        public double dIcbo
-        { get; set; }
-
-        /// <summary>
-        /// Ток базы
-        /// </summary>
-        public double Ib
-        {
-            get
-            {
-                return Ic / hfeTyp;
-            }
-        }
-
-        /// <summary>
-        /// Входное сопротивление
-        /// </summary>
-        public double hie
-        {
-            get
-            {
-                return hfeTyp / (40 * Ic);
-            }
-        }
-
-        /// <summary>
-        /// Напряжение отсечки
-        /// </summary>
-        public double InternalVbe
-        {
-            get
-            {
-                return Vbe - Ib * hie;
-            }
-        }
-
-        /// <summary>
-        /// Первое сопротивление базы
+        /// Первое сопротивление базы, Ом
         /// </summary>
         public double Rb1
         {
@@ -153,7 +32,7 @@ namespace VKR
         }
 
         /// <summary>
-        /// Второе сопротивление базы
+        /// Второе сопротивление базы, Ом
         /// </summary>
         public double Rb2
         {
@@ -164,7 +43,7 @@ namespace VKR
         }
 
         /// <summary>
-        /// Сопротивление коллектора
+        /// Сопротивление коллектора, Ом
         /// </summary>
         public double Rc
         {
@@ -175,11 +54,11 @@ namespace VKR
         }
 
         /// <summary>
-        /// Коэффициент стабилизации для теплового тока
+        /// Вычисляет коэффициент стабилизации для теплового тока
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <returns></returns>
-        public double SIcbo(double hfe)
+        /// <returns>Коэффициент стабилизации для теплового тока</returns>
+        public override double SIcbo(double hfe)
         {
             double A = Rc / hfe + Rc + Rb1 / hfe + Rb1;
             double B = Rc / (Rb2 * hfe) + Rc / Rb2 + Rb1 / (Rb2 * hfe) + Rb1 / Rb2 + 1 / hfe + 1;
@@ -188,22 +67,22 @@ namespace VKR
         }
 
         /// <summary>
-        /// Коэффициент стабилизации для напряжения отсечки
+        /// Вычисляет коэффициент стабилизации для напряжения отсечки
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <returns></returns>
-        public double SInternalVbe(double hfe)
+        /// <returns>Коэффициент стабилизации для напряжения отсечки</returns>
+        public override double SInternalVbe(double hfe)
         {
             double C = Rc + Rc / hfe + Rb1 / hfe + hie * (Rc / (Rb2 * hfe) + Rb1 / (Rb2 * hfe) + 1 / hfe);
             return (-Rc / Rb2 - Rb1 / Rb2 - 1) / C;
         }
 
         /// <summary>
-        /// Коэффициент стабилизации для коэффициента усиления тока коллектора 
+        /// Вычисляет коэффициент стабилизации для коэффициента усиления тока коллектора
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <returns></returns>
-        public double Shfe(double hfe)
+        /// <returns>Коэффициент стабилизации для усиления тока коллектора</returns>
+        public override double Shfe(double hfe)
         {
             double A = Rc / hfe + Rc + Rb1 / hfe + Rb1;
             double B = Rc / (Rb2 * hfe) + Rc / Rb2 + Rb1 / (Rb2 * hfe) + Rb1 / Rb2 + 1 / hfe + 1;
@@ -220,7 +99,7 @@ namespace VKR
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
         /// <param name="Tc">Температура транзистора</param>
-        /// <returns></returns>
+        /// <returns>Ток коллектора, мА</returns>
         public double CalculateIc(double hfe, double Tc)
         {
             double Ic = -1 * (-Rc / hfe * Icbo - Rc * Icbo + Rc / Rb2 * InternalVbe - Rc / (Rb2 * hfe) * hie * Icbo - Rc / Rb2 * hie * Icbo - Rb1 / hfe * Icbo - Rb1 * Icbo
@@ -233,11 +112,7 @@ namespace VKR
             else
             {
                 double deltaTc = Tc - TcTyp;
-                double deltaIcbo = Icbo * Math.Pow(dIcbo, deltaTc / 10) - Icbo;
-                double deltaInternalVbe = dVbe * deltaTc;
-                double deltahfe = hfe * (1 + dhfe / 100 * deltaTc) - hfe;
-
-                return (Ic + SIcbo(hfe) * deltaIcbo + SInternalVbe(hfe) * deltaInternalVbe + Shfe(hfe) * deltahfe) * 1000;
+                return Ic * 1000 + DeltaIcIcbo(hfe, deltaTc) + DeltaIcInternalVbe(hfe, deltaTc) + DeltaIcHfe(hfe, deltaTc);
             }
         }
     }

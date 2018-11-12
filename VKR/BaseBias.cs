@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace VKR
+﻿namespace VKR
 {
     /// <summary>
     /// Содержит параметры для смещения биполярного транзистора с общей базой
@@ -11,7 +6,7 @@ namespace VKR
     public class BaseBias : TransistorBias
     {
         /// <summary>
-        /// Сопротивление базы
+        /// Сопротивление базы, Ом
         /// </summary>
         public double Rb
         {
@@ -22,7 +17,7 @@ namespace VKR
         }
 
         /// <summary>
-        /// Сопротивление коллектора
+        /// Сопротивление коллектора, Ом
         /// </summary>
         public double Rc
         {
@@ -33,30 +28,30 @@ namespace VKR
         }
 
         /// <summary>
-        /// Коэффициент стабилизации для теплового тока
+        /// Вычисляет коэффициент стабилизации для теплового тока
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <returns></returns>
+        /// <returns>Коэффициент стабилизации для теплового тока</returns>
         public override double SIcbo(double hfe)
         {
             return 1 + hfe;
         }
 
         /// <summary>
-        /// Коэффициент стабилизации для напряжения отсечки
+        /// Вычисляет коэффициент стабилизации для напряжения отсечки
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <returns></returns>
+        /// <returns>Коэффициент стабилизации для напряжения отсечки</returns>
         public override double SInternalVbe(double hfe)
         {
             return -hfe / (hie + 30000);
         }
 
         /// <summary>
-        /// Коэффициент стабилизации для коэффициента усиления тока коллектора 
+        /// Вычисляет коэффициент стабилизации для коэффициента усиления тока коллектора
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <returns></returns>
+        /// <returns>Коэффициент стабилизации для усиления тока коллектора</returns>
         public override double Shfe(double hfe)
         {
             return (Vcc - InternalVbe) / (hie + 30000) + Icbo;
@@ -78,7 +73,6 @@ namespace VKR
             else
             {
                 double deltaTc = Tc - TcTyp;
-
                 return Ic * 1000 + DeltaIcIcbo(hfe, deltaTc) + DeltaIcInternalVbe(hfe, deltaTc) + DeltaIcHfe(hfe, deltaTc);
             }
         }
