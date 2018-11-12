@@ -400,6 +400,7 @@
     <Compile Include="EmitterFeedbackForm.aspx.designer.cs">
       <DependentUpon>EmitterFeedbackForm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TransistorBias.cs" />
     <Compile Include="VoltageFeedbackBias.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
