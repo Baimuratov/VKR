@@ -58,6 +58,17 @@ namespace VKR
         }
 
         /// <summary>
+        /// Ток источника питания
+        /// </summary>
+        public double Icc
+        {
+            get
+            {
+                return CalculateIc(hfeTyp, TcTyp) + (Ib + Ib2) * 1000;
+            }
+        }
+
+        /// <summary>
         /// Вычисляет коэффициент стабилизации для теплового тока
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>

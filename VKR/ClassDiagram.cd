@@ -10,35 +10,35 @@
   <Class Name="VKR.BaseBias">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAAAAAABAAAAAAAADAAAAAAAAAIAAA=</HashCode>
+      <HashCode>CAAAAAAAAAAAAAAAAAAABAAAAAAAADAAAAAAAAAIQAA=</HashCode>
       <FileName>BaseBias.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="VKR.VoltageFeedbackBias">
-    <Position X="0.5" Y="3.25" Width="1.5" />
+    <Position X="0.5" Y="3.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAAAAAABAAAAAAAADAAAAAAAAAIAAA=</HashCode>
+      <HashCode>CAAAAAAAAAAAAAAAAAAABAAAAAAAADAAAAAAAAAIQAA=</HashCode>
       <FileName>VoltageFeedbackBias.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="VKR.VoltageFeedbackCurrentSource">
-    <Position X="6.25" Y="0.5" Width="1.5" />
+    <Position X="6.25" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAEAAAAAAAAIAABAAAAAAAADAAAAAAAAAIAAA=</HashCode>
+      <HashCode>CAAAAAAAEAAAAAAAAIAABAAAAAAAADAAAAAAAAAIQAA=</HashCode>
       <FileName>VoltageFeedbackCurrentSource.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="VKR.VoltageFeedbackVoltageSource">
-    <Position X="6.25" Y="4" Width="1.5" />
+    <Position X="6.25" Y="4" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAEAAAAAAAAIAABAAAAAAAADAAAAAAAAAIAAA=</HashCode>
+      <HashCode>CAAAAAAAEAAAAAAAAIAABAAAAAAAADAAAAAAAAAIQAA=</HashCode>
       <FileName>VoltageFeedbackVoltageSource.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="VKR.EmitterFeedbackBias">
-    <Position X="8.5" Y="0.5" Width="1.5" />
+    <Position X="9.25" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAEAAAAgAAAIAABAAAAAAAADAAAAAAAAAAAAA=</HashCode>
+      <HashCode>CAAAAAAAEAAAAgAAAIAABAAAAAAAADAAAAAAAAAAQAA=</HashCode>
       <FileName>EmitterFeedbackBias.cs</FileName>
     </TypeIdentifier>
   </Class>

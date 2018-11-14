@@ -44,6 +44,7 @@ namespace VKR
 
             RbTextBox.Text = scheme.Rb.ToString();
             RcTextBox.Text = scheme.Rc.ToString();
+            IccTextBox.Text = scheme.Icc.ToString("0.00");
 
             IcTable.Rows[0].Cells[1].Text = scheme.hfeMin.ToString();
             IcTable.Rows[0].Cells[2].Text = scheme.hfeTyp.ToString();
@@ -71,11 +72,6 @@ namespace VKR
             STable.Rows[2].Cells[2].Text = deltaIcInternalVbe.ToString("0.000");
             STable.Rows[3].Cells[2].Text = deltaIcHfe.ToString("0.000");
             STable.Rows[4].Cells[2].Text = (deltaIcIcbo + deltaIcInternalVbe + deltaIcHfe).ToString("0.000");
-        }
-
-        protected void IcTextBox_TextChanged(object sender, EventArgs e)
-        {
-            Label1.Text = "IcTextBox Text = " + IcTextBox.Text;
         }
     }
 }

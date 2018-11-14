@@ -22,7 +22,7 @@
             <asp:Label ID="mA1Label" runat="server" style="z-index: 1; left: 439px; top: 120px; position: absolute" Text="мА"></asp:Label>
             <asp:Label ID="V1Label" runat="server" style="z-index: 1; left: 439px; top: 88px; position: absolute" Text="В"></asp:Label>
             <asp:TextBox ID="VccTextBox" runat="server" Height="15px" style="z-index: 1; left: 375px; top: 86px; position: absolute" Width="50px">2,7</asp:TextBox>
-            <asp:TextBox ID="IcTextBox" runat="server" Height="15px" style="z-index: 1; left: 274px; top: 203px; position: absolute" Width="50px" OnTextChanged="IcTextBox_TextChanged">5</asp:TextBox>
+            <asp:TextBox ID="IcTextBox" runat="server" Height="15px" style="z-index: 1; left: 274px; top: 203px; position: absolute" Width="50px">5</asp:TextBox>
             <asp:TextBox ID="IccTextBox" runat="server" Height="15px" style="z-index: 1; left: 375px; top: 107px; position: absolute; margin-top: 11px" Width="50px" ReadOnly="True"></asp:TextBox>
             <asp:TextBox ID="RcTextBox" runat="server" Height="15px" style="z-index: -1; left: 76px; top: 152px; position: absolute" Width="70px" ReadOnly="True"></asp:TextBox>
             <asp:TextBox ID="RbTextBox" runat="server" Height="15px" style="position: absolute; z-index: 1; left: 76px; top: 226px" Width="70px" ReadOnly="True"></asp:TextBox>
@@ -36,7 +36,6 @@
             <asp:Label ID="IcLabel" runat="server" style="z-index: 1; left: 241px; top: 203px; position: absolute" Text="I<sub>C</sub> = "></asp:Label>
             <asp:Label ID="VccLabel" runat="server" style="z-index: 1; left: 329px; top: 86px; position: absolute" Text="V<sub>CC</sub> = "></asp:Label>
             <asp:Label ID="IccLabel" runat="server" style="z-index: 1; left: 329px; top: 118px; position: absolute" Text="I<sub>CC</sub> = "></asp:Label>
-            <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 396px; top: 203px; position: absolute" Text="Ic Text = "></asp:Label>
         </div>
         <ol>
             <li>Введите значения V<sub>CC</sub>, V<sub>CE</sub> и I<sub>C</sub></li>
@@ -93,7 +92,7 @@
                 <asp:TextBox ID="dIcboTextBox" runat="server" Height="15px" Width="50px">2</asp:TextBox>
             &nbsp;/10°C</div>
         </div>
-        <div style="z-index: 1; left: 10px; top: 460px; position: absolute; height: 151px; width: 227px">
+        <div style="z-index: 1; left: 10px; top: 460px; position: absolute; height: 173px; width: 227px">
             Ток коллектора, I<sub>C</sub> (мА)<br />
             <asp:Table ID="IcTable" runat="server" GridLines="Both">
                 <asp:TableRow runat="server" BackColor="#EEEEF2" HorizontalAlign="Center" VerticalAlign="Middle" Height="24px">
@@ -121,6 +120,7 @@
                     <asp:TableCell runat="server"></asp:TableCell>
                 </asp:TableRow>
             </asp:Table>
+            <br />
             I<sub>C</sub> max/min = 
             <asp:TextBox ID="IcMaxMinTextBox" runat="server" Height="15px" Width="50px"></asp:TextBox>
         </div>
@@ -154,7 +154,7 @@
                 </asp:TableRow>
             </asp:Table>
         </div>
-        <asp:Button ID="CalculateButton" runat="server" OnClick="CalculateButton_Click" style="z-index: 1; left: 24px; top: 626px; position: absolute" Text="Рассчитать" />
+        <asp:Button ID="CalculateButton" runat="server" OnClick="CalculateButton_Click" style="z-index: 1; left: 423px; top: 421px; position: absolute" Text="Рассчитать" />
         <dialog id="Dialog1">
 
         </dialog>

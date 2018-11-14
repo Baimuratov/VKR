@@ -45,6 +45,7 @@ namespace VKR
             Rb2TextBox.Text = scheme.Rb2.ToString("0.");
             ReTextBox.Text = scheme.Re.ToString("0.");
             Irb2TextBox.Text = (scheme.Ib2 * 1000).ToString();
+            IccTextBox.Text = scheme.Icc.ToString("0.00");
 
             IcTable.Rows[0].Cells[1].Text = scheme.hfeMin.ToString();
             IcTable.Rows[0].Cells[2].Text = scheme.hfeTyp.ToString();
