@@ -184,6 +184,24 @@ namespace VKR {
         protected global::System.Web.UI.WebControls.Label IccLabel;
         
         /// <summary>
+        /// VccValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator VccValidator;
+        
+        /// <summary>
+        /// VceValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator VceValidator;
+        
+        /// <summary>
         /// hfeMinTextBox элемент управления.
         /// </summary>
         /// <remarks>
@@ -191,6 +209,15 @@ namespace VKR {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox hfeMinTextBox;
+        
+        /// <summary>
+        /// hfeMinValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator hfeMinValidator;
         
         /// <summary>
         /// hfeTypTextBox элемент управления.
@@ -202,6 +229,15 @@ namespace VKR {
         protected global::System.Web.UI.WebControls.TextBox hfeTypTextBox;
         
         /// <summary>
+        /// hfeTypValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator hfeTypValidator;
+        
+        /// <summary>
         /// hfeMaxTextBox элемент управления.
         /// </summary>
         /// <remarks>
@@ -209,6 +245,15 @@ namespace VKR {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox hfeMaxTextBox;
+        
+        /// <summary>
+        /// hfeMaxValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator hfeMaxValidator;
         
         /// <summary>
         /// IcboTextBox элемент управления.
@@ -220,6 +265,15 @@ namespace VKR {
         protected global::System.Web.UI.WebControls.TextBox IcboTextBox;
         
         /// <summary>
+        /// IcboValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator IcboValidator;
+        
+        /// <summary>
         /// TcMinTextBox элемент управления.
         /// </summary>
         /// <remarks>
@@ -227,6 +281,15 @@ namespace VKR {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TcMinTextBox;
+        
+        /// <summary>
+        /// TcMinValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator TcMinValidator;
         
         /// <summary>
         /// TcTypTextBox элемент управления.
@@ -247,6 +310,24 @@ namespace VKR {
         protected global::System.Web.UI.WebControls.TextBox TcMaxTextBox;
         
         /// <summary>
+        /// TcMaxValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator TcMaxValidator;
+        
+        /// <summary>
+        /// IcValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator IcValidator;
+        
+        /// <summary>
         /// VbeTextBox элемент управления.
         /// </summary>
         /// <remarks>
@@ -256,13 +337,31 @@ namespace VKR {
         protected global::System.Web.UI.WebControls.TextBox VbeTextBox;
         
         /// <summary>
-        /// dhFETextBox элемент управления.
+        /// VbeValidator элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dhFETextBox;
+        protected global::System.Web.UI.WebControls.CustomValidator VbeValidator;
+        
+        /// <summary>
+        /// dhfeTextBox элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox dhfeTextBox;
+        
+        /// <summary>
+        /// dhfeValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator dhfeValidator;
         
         /// <summary>
         /// dVbeTextBox элемент управления.
@@ -274,6 +373,15 @@ namespace VKR {
         protected global::System.Web.UI.WebControls.TextBox dVbeTextBox;
         
         /// <summary>
+        /// dVbeValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator dVbeValidator;
+        
+        /// <summary>
         /// dIcboTextBox элемент управления.
         /// </summary>
         /// <remarks>
@@ -281,6 +389,15 @@ namespace VKR {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox dIcboTextBox;
+        
+        /// <summary>
+        /// dIcboValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator dIcboValidator;
         
         /// <summary>
         /// IcTable элемент управления.
@@ -389,5 +506,14 @@ namespace VKR {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CalculateButton;
+        
+        /// <summary>
+        /// ValidationSummary1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
     }
 }

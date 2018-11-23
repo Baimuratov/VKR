@@ -18,60 +18,378 @@ namespace VKR
 
         protected void CalculateButton_Click(object sender, EventArgs e)
         {
-            // Считывание полей
-            scheme.Vcc = Convert.ToDouble(VccTextBox.Text);
+            if (IsValid)
+            {
+                // Считывание полей
+                //scheme.Vcc = Convert.ToDouble(VccTextBox.Text);
 
-            scheme.Ic = Convert.ToDouble(IcTextBox.Text)/1000;
+                scheme.Ic = Convert.ToDouble(IcTextBox.Text) / 1000;
 
-            scheme.Vce = Convert.ToDouble(VceTextBox.Text);
-            scheme.hfeMin = Convert.ToDouble(hfeMinTextBox.Text);
-            scheme.hfeTyp = Convert.ToDouble(hfeTypTextBox.Text);
-            scheme.hfeMax = Convert.ToDouble(hfeMaxTextBox.Text);
-            scheme.Icbo = Convert.ToDouble(IcboTextBox.Text) / 1000000;
-            scheme.TcMin = Convert.ToDouble(TcMinTextBox.Text);
-            scheme.TcMax = Convert.ToDouble(TcMaxTextBox.Text);
-            scheme.Vbe = Convert.ToDouble(VbeTextBox.Text);
-            scheme.dhfe = Convert.ToDouble(dhFETextBox.Text);
-            scheme.dVbe = Convert.ToDouble(dVbeTextBox.Text) / 1000;
-            scheme.dIcbo = Convert.ToDouble(dIcboTextBox.Text);
+                //scheme.Vce = Convert.ToDouble(VceTextBox.Text);
+                scheme.hfeMin = Convert.ToDouble(hfeMinTextBox.Text);
+                scheme.hfeTyp = Convert.ToDouble(hfeTypTextBox.Text);
+                scheme.hfeMax = Convert.ToDouble(hfeMaxTextBox.Text);
+                scheme.Icbo = Convert.ToDouble(IcboTextBox.Text) / 1000000;
+                scheme.TcMin = Convert.ToDouble(TcMinTextBox.Text);
+                scheme.TcMax = Convert.ToDouble(TcMaxTextBox.Text);
+                scheme.Vbe = Convert.ToDouble(VbeTextBox.Text);
+                scheme.dhfe = Convert.ToDouble(dhfeTextBox.Text);
+                scheme.dVbe = Convert.ToDouble(dVbeTextBox.Text) / 1000;
+                scheme.dIcbo = Convert.ToDouble(dIcboTextBox.Text);
 
-            // Расчёт параметров
-            double IcMin = scheme.CalculateIc(scheme.hfeMin, scheme.TcMin);
-            double IcMax = scheme.CalculateIc(scheme.hfeMax, scheme.TcMax);
-            double deltaIcIcbo = scheme.DeltaIcIcbo(scheme.hfeTyp, scheme.TcMax - scheme.TcTyp);
-            double deltaIcInternalVbe = scheme.DeltaIcInternalVbe(scheme.hfeTyp, scheme.TcMax - scheme.TcTyp);
-            double deltaIcHfe = scheme.DeltaIcHfe(scheme.hfeTyp, scheme.TcMax - scheme.TcTyp);
+                // Расчёт параметров
+                double IcMin = scheme.CalculateIc(scheme.hfeMin, scheme.TcMin);
+                double IcMax = scheme.CalculateIc(scheme.hfeMax, scheme.TcMax);
+                double deltaIcIcbo = scheme.DeltaIcIcbo(scheme.hfeTyp, scheme.TcMax - scheme.TcTyp);
+                double deltaIcInternalVbe = scheme.DeltaIcInternalVbe(scheme.hfeTyp, scheme.TcMax - scheme.TcTyp);
+                double deltaIcHfe = scheme.DeltaIcHfe(scheme.hfeTyp, scheme.TcMax - scheme.TcTyp);
 
-            RbTextBox.Text = scheme.Rb.ToString();
-            RcTextBox.Text = scheme.Rc.ToString();
-            IccTextBox.Text = scheme.Icc.ToString("0.00");
+                RbTextBox.Text = scheme.Rb.ToString();
+                RcTextBox.Text = scheme.Rc.ToString();
+                IccTextBox.Text = scheme.Icc.ToString("0.00");
 
-            IcTable.Rows[0].Cells[1].Text = scheme.hfeMin.ToString();
-            IcTable.Rows[0].Cells[2].Text = scheme.hfeTyp.ToString();
-            IcTable.Rows[0].Cells[3].Text = scheme.hfeMax.ToString();
-            IcTable.Rows[1].Cells[0].Text = scheme.TcMin.ToString();
-            IcTable.Rows[2].Cells[0].Text = scheme.TcTyp.ToString();
-            IcTable.Rows[3].Cells[0].Text = scheme.TcMax.ToString();
+                IcTable.Rows[0].Cells[1].Text = scheme.hfeMin.ToString();
+                IcTable.Rows[0].Cells[2].Text = scheme.hfeTyp.ToString();
+                IcTable.Rows[0].Cells[3].Text = scheme.hfeMax.ToString();
+                IcTable.Rows[1].Cells[0].Text = scheme.TcMin.ToString();
+                IcTable.Rows[2].Cells[0].Text = scheme.TcTyp.ToString();
+                IcTable.Rows[3].Cells[0].Text = scheme.TcMax.ToString();
 
-            IcTable.Rows[1].Cells[1].Text = IcMin.ToString("0.00");
-            IcTable.Rows[1].Cells[2].Text = scheme.CalculateIc(scheme.hfeTyp, scheme.TcMin).ToString("0.00");
-            IcTable.Rows[1].Cells[3].Text = scheme.CalculateIc(scheme.hfeMax, scheme.TcMin).ToString("0.00");
-            IcTable.Rows[2].Cells[1].Text = scheme.CalculateIc(scheme.hfeMin, scheme.TcTyp).ToString("0.00");
-            IcTable.Rows[2].Cells[2].Text = scheme.CalculateIc(scheme.hfeTyp, scheme.TcTyp).ToString("0.00");
-            IcTable.Rows[2].Cells[3].Text = scheme.CalculateIc(scheme.hfeMax, scheme.TcTyp).ToString("0.00");
-            IcTable.Rows[3].Cells[1].Text = scheme.CalculateIc(scheme.hfeMin, scheme.TcMax).ToString("0.00");
-            IcTable.Rows[3].Cells[2].Text = scheme.CalculateIc(scheme.hfeTyp, scheme.TcMax).ToString("0.00");
-            IcTable.Rows[3].Cells[3].Text = IcMax.ToString("0.00");
+                IcTable.Rows[1].Cells[1].Text = IcMin.ToString("0.00");
+                IcTable.Rows[1].Cells[2].Text = scheme.CalculateIc(scheme.hfeTyp, scheme.TcMin).ToString("0.00");
+                IcTable.Rows[1].Cells[3].Text = scheme.CalculateIc(scheme.hfeMax, scheme.TcMin).ToString("0.00");
+                IcTable.Rows[2].Cells[1].Text = scheme.CalculateIc(scheme.hfeMin, scheme.TcTyp).ToString("0.00");
+                IcTable.Rows[2].Cells[2].Text = scheme.CalculateIc(scheme.hfeTyp, scheme.TcTyp).ToString("0.00");
+                IcTable.Rows[2].Cells[3].Text = scheme.CalculateIc(scheme.hfeMax, scheme.TcTyp).ToString("0.00");
+                IcTable.Rows[3].Cells[1].Text = scheme.CalculateIc(scheme.hfeMin, scheme.TcMax).ToString("0.00");
+                IcTable.Rows[3].Cells[2].Text = scheme.CalculateIc(scheme.hfeTyp, scheme.TcMax).ToString("0.00");
+                IcTable.Rows[3].Cells[3].Text = IcMax.ToString("0.00");
 
-            IcMaxMinTextBox.Text = (IcMax / IcMin).ToString("0.00");
+                IcMaxMinTextBox.Text = (IcMax / IcMin).ToString("0.00");
 
-            STable.Rows[1].Cells[1].Text = scheme.SIcbo(scheme.hfeTyp).ToString("0.00E+00");
-            STable.Rows[2].Cells[1].Text = scheme.SInternalVbe(scheme.hfeTyp).ToString("0.00E+00");
-            STable.Rows[3].Cells[1].Text = scheme.Shfe(scheme.hfeTyp).ToString("0.00E+00");
-            STable.Rows[1].Cells[2].Text = deltaIcIcbo.ToString("0.000");
-            STable.Rows[2].Cells[2].Text = deltaIcInternalVbe.ToString("0.000");
-            STable.Rows[3].Cells[2].Text = deltaIcHfe.ToString("0.000");
-            STable.Rows[4].Cells[2].Text = (deltaIcIcbo + deltaIcInternalVbe + deltaIcHfe).ToString("0.000");
+                STable.Rows[1].Cells[1].Text = scheme.SIcbo(scheme.hfeTyp).ToString("0.00E+00");
+                STable.Rows[2].Cells[1].Text = scheme.SInternalVbe(scheme.hfeTyp).ToString("0.00E+00");
+                STable.Rows[3].Cells[1].Text = scheme.Shfe(scheme.hfeTyp).ToString("0.00E+00");
+                STable.Rows[1].Cells[2].Text = deltaIcIcbo.ToString("0.000");
+                STable.Rows[2].Cells[2].Text = deltaIcInternalVbe.ToString("0.000");
+                STable.Rows[3].Cells[2].Text = deltaIcHfe.ToString("0.000");
+                STable.Rows[4].Cells[2].Text = (deltaIcIcbo + deltaIcInternalVbe + deltaIcHfe).ToString("0.000");
+            }
+        }
+
+        protected void VccValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (args.IsValid = (value > 0 && value <= 1000))
+                {
+                    scheme.Vcc = value;
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void VceValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (value < 0)
+                {
+                    args.IsValid = false;
+                }
+                else
+                {
+                    VccValidator.Validate();
+                    if (VccValidator.IsValid)
+                    {
+                        if (args.IsValid = value < Convert.ToDouble(VccTextBox.Text))
+                        {
+                            scheme.Vce = value;
+                        }
+                    }
+                    else
+                    {
+                        args.IsValid = true;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void hfeMinValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (value < 1 && value > 10000)
+                {
+                    args.IsValid = false;
+                }
+                else
+                {
+                    hfeTypValidator.Validate();
+                    if (hfeTypValidator.IsValid)
+                    {
+                        if (args.IsValid = value < Convert.ToDouble(hfeTypTextBox.Text))
+                        {
+                            scheme.hfeMin = value;
+                        }
+                    }
+                    else
+                    {
+                        args.IsValid = true;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void hfeTypValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (value < 1 && value > 10000)
+                {
+                    args.IsValid = false;
+                }
+                else
+                {
+                    hfeMinValidator.Validate();
+                    hfeMaxValidator.Validate();
+                    if (hfeMinValidator.IsValid && hfeMaxValidator.IsValid)
+                    {
+                        if (args.IsValid = value > Convert.ToDouble(hfeMinTextBox.Text) && value < Convert.ToDouble(hfeMaxTextBox.Text))
+                        {
+                            scheme.hfeTyp = value;
+                        }
+                    }
+                    else
+                    {
+                        args.IsValid = true;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void hfeMaxValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (value < 1 && value > 10000)
+                {
+                    args.IsValid = false;
+                }
+                else
+                {
+                    hfeTypValidator.Validate();
+                    if (hfeTypValidator.IsValid)
+                    {
+                        if (args.IsValid = value > Convert.ToDouble(hfeTypTextBox.Text))
+                        {
+                            scheme.hfeMax = value;
+                        }
+                    }
+                    else
+                    {
+                        args.IsValid = true;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void IcboValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (args.IsValid = (value > 0 && value <= 1000000))
+                {
+                    // Разделить на 1000000, чтобы перевести мкА в А
+                    scheme.Icbo = value / 1000000;
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void TcMinValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (value < -273)
+                {
+                    args.IsValid = false;
+                }
+                else
+                {
+                    TcMaxValidator.Validate();
+                    if (TcMaxValidator.IsValid)
+                    {
+                        if (args.IsValid = value < Convert.ToDouble(TcMaxTextBox.Text))
+                        {
+                            scheme.TcMin = value;
+                        }
+                    }
+                    else
+                    {
+                        args.IsValid = true;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void TcMaxValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (value > 200)
+                {
+                    args.IsValid = false;
+                }
+                else
+                {
+                    TcMinValidator.Validate();
+                    if (TcMinValidator.IsValid)
+                    {
+                        if (args.IsValid = value > Convert.ToDouble(TcMinTextBox.Text))
+                        {
+                            scheme.TcMax = value;
+                        }
+                    }
+                    else
+                    {
+                        args.IsValid = true;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void VbeValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (args.IsValid = (value > 0 && value <= 5))
+                {
+                    scheme.Vbe = value;
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void dhfeValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (args.IsValid = (value >= -1000 && value <= 1000))
+                {
+                    scheme.dhfe = value;
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void dVbeValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (args.IsValid = (value >= -10000 && value <= 10000))
+                {
+                    // Разделить на 1000, чтобы изменить мВ на В
+                    scheme.dVbe = value / 1000;
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void dIcboValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (args.IsValid = (value > 0 && value <= 500))
+                {
+                    scheme.dIcbo = value;
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void IcValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            double value;
+            try
+            {
+                value = Convert.ToDouble(args.Value);
+                if (args.IsValid = (value > 0 && value <= 5000))
+                {
+                    // Разделить на 1000, чтобы перевести мА в А
+                    scheme.Ic = value / 1000;
+                }
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
         }
     }
 }
