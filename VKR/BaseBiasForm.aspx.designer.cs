@@ -13,15 +13,6 @@ namespace VKR {
     public partial class WebForm1 {
         
         /// <summary>
-        /// form1 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
         /// mA1Label элемент управления.
         /// </summary>
         /// <remarks>
@@ -202,6 +193,15 @@ namespace VKR {
         protected global::System.Web.UI.WebControls.CustomValidator VceValidator;
         
         /// <summary>
+        /// IcValidator элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator IcValidator;
+        
+        /// <summary>
         /// hfeMinTextBox элемент управления.
         /// </summary>
         /// <remarks>
@@ -317,15 +317,6 @@ namespace VKR {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator TcMaxValidator;
-        
-        /// <summary>
-        /// IcValidator элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator IcValidator;
         
         /// <summary>
         /// VbeTextBox элемент управления.

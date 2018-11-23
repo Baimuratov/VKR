@@ -100,22 +100,26 @@ namespace VKR
             try
             {
                 value = Convert.ToDouble(args.Value);
-                if (value < 0)
+                if (value <= 0 || value > 1000)
                 {
                     args.IsValid = false;
                 }
                 else
                 {
-                    VccValidator.Validate();
-                    if (VccValidator.IsValid)
+                    try
                     {
-                        if (args.IsValid = value < Convert.ToDouble(VccTextBox.Text))
+                        double Vcc = Convert.ToDouble(VccTextBox.Text);
+                        if (args.IsValid = (value < Vcc))
                         {
                             scheme.Vce = value;
                         }
                     }
-                    else
+                    catch (Exception)
                     {
+                        // Если значение в поле VccTextBox некорректное,
+                        // то величина Vcc для сравнения отсутствует и нельзя определить корректность Vce.
+                        // В этом случае сообщение об ошибке для Vce не выводится,
+                        // но его присваивание свойству схемы не осуществляется
                         args.IsValid = true;
                     }
                 }
@@ -132,21 +136,21 @@ namespace VKR
             try
             {
                 value = Convert.ToDouble(args.Value);
-                if (value < 1 && value > 10000)
+                if (value < 1 || value > 10000)
                 {
                     args.IsValid = false;
                 }
                 else
                 {
-                    hfeTypValidator.Validate();
-                    if (hfeTypValidator.IsValid)
+                    try
                     {
-                        if (args.IsValid = value < Convert.ToDouble(hfeTypTextBox.Text))
+                        double hfeTyp = Convert.ToDouble(hfeTypTextBox.Text);
+                        if (args.IsValid = (value < hfeTyp))
                         {
                             scheme.hfeMin = value;
                         }
                     }
-                    else
+                    catch (Exception)
                     {
                         args.IsValid = true;
                     }
@@ -164,22 +168,22 @@ namespace VKR
             try
             {
                 value = Convert.ToDouble(args.Value);
-                if (value < 1 && value > 10000)
+                if (value < 1 || value > 10000)
                 {
                     args.IsValid = false;
                 }
                 else
                 {
-                    hfeMinValidator.Validate();
-                    hfeMaxValidator.Validate();
-                    if (hfeMinValidator.IsValid && hfeMaxValidator.IsValid)
+                    try
                     {
-                        if (args.IsValid = value > Convert.ToDouble(hfeMinTextBox.Text) && value < Convert.ToDouble(hfeMaxTextBox.Text))
+                        double hfeMin = Convert.ToDouble(hfeMinTextBox.Text);
+                        double hfeMax = Convert.ToDouble(hfeMaxTextBox.Text);
+                        if (args.IsValid = (value > hfeMin && value < hfeMax))
                         {
                             scheme.hfeTyp = value;
                         }
                     }
-                    else
+                    catch (Exception)
                     {
                         args.IsValid = true;
                     }
@@ -197,21 +201,21 @@ namespace VKR
             try
             {
                 value = Convert.ToDouble(args.Value);
-                if (value < 1 && value > 10000)
+                if (value < 1 || value > 10000)
                 {
                     args.IsValid = false;
                 }
                 else
                 {
-                    hfeTypValidator.Validate();
-                    if (hfeTypValidator.IsValid)
+                    try
                     {
-                        if (args.IsValid = value > Convert.ToDouble(hfeTypTextBox.Text))
+                        double hfeTyp = Convert.ToDouble(hfeTypTextBox.Text);
+                        if (args.IsValid = (value > hfeTyp))
                         {
                             scheme.hfeMax = value;
                         }
                     }
-                    else
+                    catch (Exception)
                     {
                         args.IsValid = true;
                     }
@@ -247,21 +251,21 @@ namespace VKR
             try
             {
                 value = Convert.ToDouble(args.Value);
-                if (value < -273)
+                if (value < -273 || value > 200)
                 {
                     args.IsValid = false;
                 }
                 else
                 {
-                    TcMaxValidator.Validate();
-                    if (TcMaxValidator.IsValid)
+                    try
                     {
-                        if (args.IsValid = value < Convert.ToDouble(TcMaxTextBox.Text))
+                        double TcTyp = Convert.ToDouble(TcTypTextBox.Text);
+                        if (args.IsValid = (value < TcTyp))
                         {
                             scheme.TcMin = value;
                         }
                     }
-                    else
+                    catch (Exception)
                     {
                         args.IsValid = true;
                     }
@@ -279,21 +283,21 @@ namespace VKR
             try
             {
                 value = Convert.ToDouble(args.Value);
-                if (value > 200)
+                if (value < -273 || value > 200)
                 {
                     args.IsValid = false;
                 }
                 else
                 {
-                    TcMinValidator.Validate();
-                    if (TcMinValidator.IsValid)
+                    try
                     {
-                        if (args.IsValid = value > Convert.ToDouble(TcMinTextBox.Text))
+                        double TcTyp = Convert.ToDouble(TcTypTextBox.Text);
+                        if (args.IsValid = (value > TcTyp))
                         {
                             scheme.TcMax = value;
                         }
                     }
-                    else
+                    catch (Exception)
                     {
                         args.IsValid = true;
                     }
