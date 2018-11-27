@@ -30,7 +30,7 @@ namespace VKR
         }
 
         /// <summary>
-        /// Ток источника питания
+        /// Ток источника питания, мА
         /// </summary>
         public double Icc
         {
@@ -74,9 +74,9 @@ namespace VKR
         /// Вычисляет ток коллектора
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <param name="Tc">Температура транзистора</param>
+        /// <param name="Tc">Температура транзистора, °C</param>
         /// <returns>Ток коллектора, мА</returns>
-        public double CalculateIc(double hfe, double Tc)
+        public override double CalculateIc(double hfe, double Tc)
         {
             double Ic = (hfe * (Vcc - InternalVbe) + Icbo * (1 + hfe) * (hie + Rb + Rc)) / (hie + Rb + Rc * (1 + hfe));
             if (Tc == TcTyp)

@@ -28,7 +28,7 @@
         }
 
         /// <summary>
-        /// Ток источника питания
+        /// Ток источника питания, мА
         /// </summary>
         public double Icc
         {
@@ -72,9 +72,9 @@
         /// Вычисляет ток коллектора
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <param name="Tc">Температура транзистора</param>
+        /// <param name="Tc">Температура транзистора, °C</param>
         /// <returns>Ток коллектора, мА</returns>
-        public double CalculateIc(double hfe, double Tc)
+        public override double CalculateIc(double hfe, double Tc)
         {
             double Ic = hfe * (Vcc - InternalVbe) / (hie + Rb) + Icbo * (1 + hfe);
             if (Tc == TcTyp)

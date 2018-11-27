@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace VKR
 {
@@ -11,19 +8,19 @@ namespace VKR
     abstract public class TransistorBias
     {
         /// <summary>
-        /// Номинальный ток коллектора
+        /// Номинальный ток коллектора, А
         /// </summary>
         public double Ic
         { get; set; }
 
         /// <summary>
-        /// Напряжение питания
+        /// Напряжение питания, В
         /// </summary>
         public double Vcc
         { get; set; }
 
         /// <summary>
-        /// Напряжение коллектор-эмиттер
+        /// Напряжение коллектор-эмиттер, В
         /// </summary>
         public double Vce
         { get; set; }
@@ -47,19 +44,19 @@ namespace VKR
         { get; set; }
 
         /// <summary>
-        /// Тепловой ток
+        /// Тепловой ток, А
         /// </summary>
         public double Icbo
         { get; set; }
 
         /// <summary>
-        /// Температура транзистора, минимальное значение
+        /// Температура транзистора, минимальное значение °C
         /// </summary>
         public double TcMin
         { get; set; }
 
         /// <summary>
-        /// Температура транзистора, нормальное значение
+        /// Температура транзистора, нормальное значение °C
         /// </summary>
         public double TcTyp
         {
@@ -70,37 +67,37 @@ namespace VKR
         }
 
         /// <summary>
-        /// Температура транзистора, максимальное значение
+        /// Температура транзистора, максимальное значение °C
         /// </summary>
         public double TcMax
         { get; set; }
 
         /// <summary>
-        /// Напряжение между базой и эмиттером
+        /// Напряжение между базой и эмиттером, В
         /// </summary>
         public double Vbe
         { get; set; }
 
         /// <summary>
-        /// Скорость изменения коэффициента усиления при изменении температуры, %/C
+        /// Скорость изменения коэффициента усиления при изменении температуры, %/°C
         /// </summary>
         public double dhfe
         { get; set; }
 
         /// <summary>
-        /// Скорость изменения напряжения отсечки при изменении температуры, V/C
+        /// Скорость изменения напряжения отсечки при изменении температуры, В/°C
         /// </summary>
         public double dVbe
         { get; set; }
 
         /// <summary>
-        /// Скорость изменения теплового тока при изменении температуры, /10 C
+        /// Скорость изменения теплового тока при изменении температуры, /10 °C
         /// </summary>
         public double dIcbo
         { get; set; }
 
         /// <summary>
-        /// Ток базы
+        /// Ток базы, А
         /// </summary>
         public double Ib
         {
@@ -111,7 +108,7 @@ namespace VKR
         }
 
         /// <summary>
-        /// Входное сопротивление
+        /// Входное сопротивление, Ом
         /// </summary>
         public double hie
         {
@@ -122,7 +119,7 @@ namespace VKR
         }
 
         /// <summary>
-        /// Напряжение отсечки
+        /// Напряжение отсечки, В
         /// </summary>
         public double InternalVbe
         {
@@ -154,14 +151,20 @@ namespace VKR
         /// <returns>Коэффициент стабилизации для усиления тока коллектора</returns>
         abstract public double Shfe(double hfe);
 
-
+        /// <summary>
+        /// Вычисляет ток коллектора
+        /// </summary>
+        /// <param name="hfe">Коэффициент усиления тока коллектора</param>
+        /// <param name="Tc">Температура транзистора, °C</param>
+        /// <returns>Ток коллектора, мА</returns>
+        abstract public double CalculateIc(double hfe, double Tc);
 
         /// <summary>
         /// Вычисляет изменение тока коллектора в зависимости от изменения
         /// теплового тока
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <param name="deltaTc">Изменение температуры транзистора</param>
+        /// <param name="deltaTc">Изменение температуры транзистора, °C</param>
         /// <returns>Ток коллектора, мА</returns>
         public double DeltaIcIcbo(double hfe, double deltaTc)
         {
@@ -174,7 +177,7 @@ namespace VKR
         /// напряжения отсечки
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <param name="deltaTc">Изменение температуры транзистора</param>
+        /// <param name="deltaTc">Изменение температуры транзистора, °C</param>
         /// <returns>Ток коллектора, мА</returns>
         public double DeltaIcInternalVbe(double hfe, double deltaTc)
         {
@@ -187,7 +190,7 @@ namespace VKR
         /// коэффициента усиления тока коллектора
         /// </summary>
         /// <param name="hfe">Коэффициент усиления тока коллектора</param>
-        /// <param name="deltaTc">Изменение температуры транзистора</param>
+        /// <param name="deltaTc">Изменение температуры транзистора, °C</param>
         /// <returns>Ток коллектора, мА</returns>
         public double DeltaIcHfe(double hfe, double deltaTc)
         {

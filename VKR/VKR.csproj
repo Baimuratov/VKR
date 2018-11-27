@@ -198,8 +198,6 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="BaseBias.png" />
-    <Content Include="BaseBias.svg" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -215,6 +213,13 @@
     </Content>
     <Content Include="BaseBiasForm.aspx" />
     <Content Include="ClassDiagram.cd" />
+    <None Include="Resources\VFBVSourcePrev.png" />
+    <None Include="Resources\BaseBiasPrev.png" />
+    <None Include="Resources\EmitterFBPrev.png" />
+    <None Include="Resources\Exclamation.png" />
+    <None Include="Resources\VFBISourcePrev.png" />
+    <None Include="Resources\VFBPrev.png" />
+    <Content Include="WebForm2.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Resources\BaseBias.png" />
     <None Include="Resources\BaseBiasM.png" />
@@ -269,6 +274,7 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -401,6 +407,13 @@
     <Compile Include="EmitterFeedbackForm.aspx.designer.cs">
       <DependentUpon>EmitterFeedbackForm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
     <Compile Include="TransistorBias.cs" />
     <Compile Include="VoltageFeedbackBias.cs" />
     <Compile Include="Contact.aspx.cs">
@@ -480,6 +493,13 @@
     <Compile Include="VoltageFeedbackVoltageSourceForm.aspx.designer.cs">
       <DependentUpon>VoltageFeedbackVoltageSourceForm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -488,6 +508,7 @@
     <EmbeddedResource Include="Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

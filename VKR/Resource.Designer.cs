@@ -83,6 +83,16 @@ namespace VKR {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BaseBiasPrev {
+            get {
+                object obj = ResourceManager.GetObject("BaseBiasPrev", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CollectorFB {
             get {
                 object obj = ResourceManager.GetObject("CollectorFB", resourceCulture);
@@ -123,6 +133,26 @@ namespace VKR {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EmitterFBPrev {
+            get {
+                object obj = ResourceManager.GetObject("EmitterFBPrev", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Exclamation {
+            get {
+                object obj = ResourceManager.GetObject("Exclamation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap V_FB_I_Source {
             get {
                 object obj = ResourceManager.GetObject("V_FB_I_Source", resourceCulture);
@@ -156,6 +186,36 @@ namespace VKR {
         internal static System.Drawing.Bitmap V_FB_V_SourceM {
             get {
                 object obj = ResourceManager.GetObject("V_FB_V_SourceM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VFBISourcePrev {
+            get {
+                object obj = ResourceManager.GetObject("VFBISourcePrev", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VFBPrev {
+            get {
+                object obj = ResourceManager.GetObject("VFBPrev", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VFBVSourcePrev {
+            get {
+                object obj = ResourceManager.GetObject("VFBVSourcePrev", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

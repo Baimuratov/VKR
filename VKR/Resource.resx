@@ -124,6 +124,9 @@
   <data name="BaseBiasM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\BaseBiasM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BaseBiasPrev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\BaseBiasPrev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CollectorFB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\CollectorFB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +138,21 @@
   </data>
   <data name="EmitterFBM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\EmitterFBM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EmitterFBPrev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\EmitterFBPrev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Exclamation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VFBISourcePrev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\VFBISourcePrev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VFBPrev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\VFBPrev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VFBVSourcePrev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\VFBVSourcePrev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="V_FB_I_Source" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\V-FB I-Source.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

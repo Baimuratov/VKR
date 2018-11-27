@@ -23,9 +23,9 @@
             <asp:Label ID="IcLabel" runat="server" style="z-index: 1; left: 241px; top: 112px; position: absolute" Text="I<sub>C</sub> = "></asp:Label>
             <asp:Label ID="VccLabel" runat="server" style="z-index: 1; left: 329px; position: absolute; top: 5px;" Text="V<sub>CC</sub> = "></asp:Label>
             <asp:Label ID="IccLabel" runat="server" style="z-index: 1; left: 329px; top: 32px; position: absolute" Text="I<sub>CC</sub> = "></asp:Label>
-            <asp:CustomValidator ID="VccValidator" runat="server" ControlToValidate="VccTextBox" style="z-index: 1; left: 456px; position: absolute; top: 5px;" OnServerValidate="VccValidator_ServerValidate" ErrorMessage="Значение V<sub>CC</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>CC</sub> ≤ 1000">*</asp:CustomValidator>
-            <asp:CustomValidator ID="VceValidator" runat="server" ControlToValidate="VceTextBox" OnServerValidate="VceValidator_ServerValidate" style="z-index: 1; left: 393px; top: 175px; position: absolute" ErrorMessage="Значение V<sub>CE</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>CE</sub> < V<sub>CC</sub>">*</asp:CustomValidator>
-            <asp:CustomValidator ID="IcValidator" runat="server" ControlToValidate="IcTextBox" ErrorMessage="Значение I<sub>C</sub> должно быть числом и лежать в интервале:<br/>0 < I<sub>C</sub> ≤ 5000" OnServerValidate="IcValidator_ServerValidate" style="z-index: 1; left: 368px; top: 112px; position: absolute">*</asp:CustomValidator>
+            <asp:CustomValidator ID="VccValidator" runat="server" ControlToValidate="VccTextBox" style="z-index: 1; left: 456px; position: absolute; top: 5px;" OnServerValidate="VccValidator_ServerValidate" ErrorMessage="Значение V<sub>CC</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>CC</sub> ≤ 1000"><img src="Resources/Exclamation.png" title="Значение Vcc должно быть числом и лежать в интервале: 0 < Vcc ≤ 1000"/></asp:CustomValidator>
+            <asp:CustomValidator ID="IcValidator" runat="server" ControlToValidate="IcTextBox" ErrorMessage="Значение I<sub>C</sub> должно быть числом и лежать в интервале:<br/>0 < I<sub>C</sub> ≤ 5000" OnServerValidate="IcValidator_ServerValidate" style="z-index: 1; left: 368px; top: 112px; position: absolute"><img src="Resources/Exclamation.png" title="Значение Ic должно быть числом и лежать в интервале:0 < Ic ≤ 5000"/></asp:CustomValidator>
+            <asp:CustomValidator ID="VceValidator" runat="server" ControlToValidate="VceTextBox" OnServerValidate="VceValidator_ServerValidate" style="z-index: 1; left: 393px; top: 175px; position: absolute" ErrorMessage="Значение V<sub>CE</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>CE</sub> < V<sub>CC</sub>"><img src="Resources/Exclamation.png" title="Значение Vce должно быть числом и лежать в интервале:0 < Vce < Vcc"/></asp:CustomValidator>
         </div>
         <ol style="position: absolute; top: 420px; left: 15px;">
             <li>Введите значения V<sub>CC</sub>, V<sub>CE</sub> и I<sub>C</sub>, используя запятую <br /> качестве разделителя целой и дробной части</li>
@@ -43,26 +43,23 @@
                 T<sub>C</sub> =<br />
             </div>
             <div style="width: 330px; position: absolute; top: 38px; left: 66px; z-index: 1; height: 124px">
-                <asp:TextBox ID="hfeMinTextBox" runat="server" Height="15px" Width="50px">50</asp:TextBox> &nbsp;min&nbsp;
-                <asp:CustomValidator ID="hfeMinValidator" runat="server" ControlToValidate="hfeMinTextBox" ErrorMessage="Значение h<sub>FE</sub> Min должно быть числом и соответствовать условиям:<br/>1 ≤ h<sub>FE</sub> Min ≤ 10000, h<sub>FE</sub> Min < h<sub>FE</sub> Typ" OnServerValidate="hfeMinValidator_ServerValidate">*</asp:CustomValidator>&nbsp;
-                <asp:TextBox ID="hfeTypTextBox" runat="server" Height="15px" Width="50px">80</asp:TextBox> &nbsp;typ&nbsp;
-                <asp:CustomValidator ID="hfeTypValidator" runat="server" ErrorMessage="Значение h<sub>FE</sub> Typ должно быть числом и соответствовать условиям:<br/>1 ≤ h<sub>FE</sub> Typ ≤ 10000, h<sub>FE</sub> Min < h<sub>FE</sub> Typ < h<sub>FE</sub> Max" ControlToValidate="hfeTypTextBox" OnServerValidate="hfeTypValidator_ServerValidate">*</asp:CustomValidator>&nbsp;
+                <asp:TextBox ID="hfeMinTextBox" runat="server" Height="15px" Width="50px">50</asp:TextBox> &nbsp;min
+                <asp:CustomValidator ID="hfeMinValidator" runat="server" ControlToValidate="hfeMinTextBox" ErrorMessage="Значение h<sub>FE</sub> Min должно быть числом и соответствовать условиям:<br/>1 ≤ h<sub>FE</sub> Min ≤ 10000, h<sub>FE</sub> Min < h<sub>FE</sub> Typ" OnServerValidate="hfeMinValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение hFE Min должно быть числом и соответствовать условиям: 1 ≤ hFE Min ≤ 10000, hFE Min < hFE Typ" /></asp:CustomValidator>&nbsp;
+                <asp:TextBox ID="hfeTypTextBox" runat="server" Height="15px" Width="50px">80</asp:TextBox> &nbsp;typ
+                <asp:CustomValidator ID="hfeTypValidator" runat="server" ErrorMessage="Значение h<sub>FE</sub> Typ должно быть числом и соответствовать условиям:<br/>1 ≤ h<sub>FE</sub> Typ ≤ 10000, h<sub>FE</sub> Min < h<sub>FE</sub> Typ < h<sub>FE</sub> Max" ControlToValidate="hfeTypTextBox" OnServerValidate="hfeTypValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение hFE Typ должно быть числом и соответствовать условиям: 1 ≤ hFE Typ ≤ 10000, hFE Min < hFE Typ < hFE Max" /></asp:CustomValidator>&nbsp;
                 <asp:TextBox ID="hfeMaxTextBox" runat="server" Height="15px" Width="50px">150</asp:TextBox> &nbsp;max
-                <asp:CustomValidator ID="hfeMaxValidator" runat="server" ErrorMessage="Значение h<sub>FE</sub> Max должно быть числом и соответствовать условиям:<br/>1 ≤ h<sub>FE</sub> Max ≤ 10000, h<sub>FE</sub> Max > h<sub>FE</sub> Typ" ControlToValidate="hfeMaxTextBox" OnServerValidate="hfeMaxValidator_ServerValidate">*</asp:CustomValidator>
+                <asp:CustomValidator ID="hfeMaxValidator" runat="server" ErrorMessage="Значение h<sub>FE</sub> Max должно быть числом и соответствовать условиям:<br/>1 ≤ h<sub>FE</sub> Max ≤ 10000, h<sub>FE</sub> Max > h<sub>FE</sub> Typ" ControlToValidate="hfeMaxTextBox" OnServerValidate="hfeMaxValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение hFE Max должно быть числом и соответствовать условиям: 1 ≤ hFE Max ≤ 10000, hFE Max > hFE Typ" /></asp:CustomValidator>
                 <br />
                 <br />
                 <asp:TextBox ID="IcboTextBox" runat="server" Height="15px" Width="50px">0,1</asp:TextBox>&nbsp;мкА
-                <asp:CustomValidator ID="IcboValidator" runat="server" ErrorMessage="Значение I<sub>CBO</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>CC</sub> ≤ 1000000" ControlToValidate="IcboTextBox" OnServerValidate="IcboValidator_ServerValidate">*</asp:CustomValidator>
+                <asp:CustomValidator ID="IcboValidator" runat="server" ErrorMessage="Значение I<sub>CBO</sub> должно быть числом и лежать в интервале:<br/>0 < I<sub>CBO</sub> ≤ 1000000" ControlToValidate="IcboTextBox" OnServerValidate="IcboValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение Icbo должно быть числом и лежать в интервале: 0 < Icbo ≤ 1000000" /></asp:CustomValidator>
                 <br />
                 <br />
-                <asp:TextBox ID="TcMinTextBox" runat="server" Height="15px" Width="50px">-25</asp:TextBox>
-                &nbsp;min&nbsp;<asp:CustomValidator ID="TcMinValidator" runat="server" ErrorMessage="Значение T<sub>C</sub> Min должно быть числом и соответствовать условиям:<br/>-273 ≤ T<sub>C</sub> Min ≤ 200, T<sub>C</sub> Min < T<sub>C</sub> Typ" ControlToValidate="TcMinTextBox" OnServerValidate="TcMinValidator_ServerValidate">*</asp:CustomValidator>&nbsp;
-                <asp:TextBox ID="TcTypTextBox" runat="server" Height="15px" Width="50px" ReadOnly="True">25</asp:TextBox>
-                &nbsp;typ&nbsp;
-                <asp:TextBox ID="TcMaxTextBox" runat="server" Height="15px" Width="50px">65</asp:TextBox>
-                &nbsp;max
-                <asp:CustomValidator ID="TcMaxValidator" runat="server" ErrorMessage="Значение T<sub>C</sub> Max должно быть числом и соответствовать условиям:<br/>-273 ≤ T<sub>C</sub> Max ≤ 200, T<sub>C</sub> Max > T<sub>C</sub> Typ" ControlToValidate="TcMaxTextBox" OnServerValidate="TcMaxValidator_ServerValidate">*</asp:CustomValidator>
-                &nbsp;°C
+                <asp:TextBox ID="TcMinTextBox" runat="server" Height="15px" Width="50px">-25</asp:TextBox>&nbsp;min
+                <asp:CustomValidator ID="TcMinValidator" runat="server" ErrorMessage="Значение T<sub>C</sub> Min должно быть числом и соответствовать условиям:<br/>-273 ≤ T<sub>C</sub> Min ≤ 200, T<sub>C</sub> Min < T<sub>C</sub> Typ" ControlToValidate="TcMinTextBox" OnServerValidate="TcMinValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение Tc Min должно быть числом и соответствовать условиям: -273 ≤ Tc Min ≤ 200, Tc Min < Tc Typ" /></asp:CustomValidator>&nbsp;
+                <asp:TextBox ID="TcTypTextBox" runat="server" Height="15px" Width="50px" ReadOnly="True">25</asp:TextBox>&nbsp;typ
+                <asp:TextBox ID="TcMaxTextBox" runat="server" Height="15px" Width="50px">65</asp:TextBox>&nbsp;max
+                <asp:CustomValidator ID="TcMaxValidator" runat="server" ErrorMessage="Значение T<sub>C</sub> Max должно быть числом и соответствовать условиям:<br/>-273 ≤ T<sub>C</sub> Max ≤ 200, T<sub>C</sub> Max > T<sub>C</sub> Typ" ControlToValidate="TcMaxTextBox" OnServerValidate="TcMaxValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение Tc Max должно быть числом и соответствовать условиям: -273 ≤ Tc Max ≤ 200, Tc Max > Tc Typ" /></asp:CustomValidator>&nbsp;°C
             </div>
         </div> 
         <div style="border: thin solid #808080; height: 204px; width: 250px; z-index: 1; left: 622px; top: 320px; position: absolute">
@@ -80,22 +77,22 @@
             <div style="width: 123px; height: 161px; z-index: 1; left: 119px; top: 37px; position: absolute; right: 74px">
                 <asp:TextBox ID="VbeTextBox" runat="server" Height="15px" Width="50px">0,78</asp:TextBox>
                 &nbsp;В
-                <asp:CustomValidator ID="VbeValidator" runat="server" ErrorMessage="Значение V<sub>BE</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>BE</sub> ≤ 5" ControlToValidate="VbeTextBox" OnServerValidate="VbeValidator_ServerValidate">*</asp:CustomValidator>
+                <asp:CustomValidator ID="VbeValidator" runat="server" ErrorMessage="Значение V<sub>BE</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>BE</sub> ≤ 5" ControlToValidate="VbeTextBox" OnServerValidate="VbeValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение Vbe должно быть числом и лежать в интервале: 0 < Vbe ≤ 5" /></asp:CustomValidator>
                 <br />
                 <br />
                 <asp:TextBox ID="dhfeTextBox" runat="server" Height="15px" Width="50px">0,5</asp:TextBox>
                 &nbsp;%/°C‪‪
-                <asp:CustomValidator ID="dhfeValidator" runat="server" ErrorMessage="Значение δh<sub>FE</sub>/δT должно быть числом и лежать в интервале:<br/>-1000 ≤ δh<sub>FE</sub>/δT ≤ 1000" ControlToValidate="dhfeTextBox" OnServerValidate="dhfeValidator_ServerValidate">*</asp:CustomValidator>
+                <asp:CustomValidator ID="dhfeValidator" runat="server" ErrorMessage="Значение δh<sub>FE</sub>/δT должно быть числом и лежать в интервале:<br/>-1000 ≤ δh<sub>FE</sub>/δT ≤ 1000" ControlToValidate="dhfeTextBox" OnServerValidate="dhfeValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение δhFE/δT должно быть числом и лежать в интервале: -1000 ≤ δhFE/δT ≤ 1000" /></asp:CustomValidator>
                 <br />
                 <br />
                 <asp:TextBox ID="dVbeTextBox" runat="server" Height="15px" Width="50px">-2</asp:TextBox>
                 &nbsp;мВ/°C
-                <asp:CustomValidator ID="dVbeValidator" runat="server" ErrorMessage="Значение δV'<sub>BE</sub>/δT должно быть числом и лежать в интервале:<br/>-10000 ≤ δV'<sub>BE</sub>/δT ≤ 10000" ControlToValidate="dVbeTextBox" OnServerValidate="dVbeValidator_ServerValidate">*</asp:CustomValidator>
+                <asp:CustomValidator ID="dVbeValidator" runat="server" ErrorMessage="Значение δV'<sub>BE</sub>/δT должно быть числом и лежать в интервале:<br/>-10000 ≤ δV'<sub>BE</sub>/δT ≤ 10000" ControlToValidate="dVbeTextBox" OnServerValidate="dVbeValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение δV'be/δT должно быть числом и лежать в интервале: -10000 ≤ δV'be/δT ≤ 10000" /></asp:CustomValidator>
                 <br />
                 <br />
                 <asp:TextBox ID="dIcboTextBox" runat="server" Height="15px" Width="50px">2</asp:TextBox>
             &nbsp;/10°C
-                <asp:CustomValidator ID="dIcboValidator" runat="server" ErrorMessage="Значение δI<sub>CBO</sub>/δT factor должно быть числом и лежать в интервале:<br/>0 < δI<sub>CBO</sub>/δT factor ≤ 500" ControlToValidate="dIcboTextBox" OnServerValidate="dIcboValidator_ServerValidate">*</asp:CustomValidator>
+                <asp:CustomValidator ID="dIcboValidator" runat="server" ErrorMessage="Значение δI<sub>CBO</sub>/δT factor должно быть числом и лежать в интервале:<br/>0 < δI<sub>CBO</sub>/δT factor ≤ 500" ControlToValidate="dIcboTextBox" OnServerValidate="dIcboValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение δIcbo/δT factor должно быть числом и лежать в интервале: 0 < δIcbo/δT factor ≤ 500" /></asp:CustomValidator>
             </div>
         </div>
         <div style="z-index: 1; left: 55px; top: 537px; position: absolute; height: 173px; width: 227px">

@@ -20,23 +20,6 @@ namespace VKR
         {
             if (IsValid)
             {
-                // Считывание полей
-                //scheme.Vcc = Convert.ToDouble(VccTextBox.Text);
-
-                scheme.Ic = Convert.ToDouble(IcTextBox.Text) / 1000;
-
-                //scheme.Vce = Convert.ToDouble(VceTextBox.Text);
-                scheme.hfeMin = Convert.ToDouble(hfeMinTextBox.Text);
-                scheme.hfeTyp = Convert.ToDouble(hfeTypTextBox.Text);
-                scheme.hfeMax = Convert.ToDouble(hfeMaxTextBox.Text);
-                scheme.Icbo = Convert.ToDouble(IcboTextBox.Text) / 1000000;
-                scheme.TcMin = Convert.ToDouble(TcMinTextBox.Text);
-                scheme.TcMax = Convert.ToDouble(TcMaxTextBox.Text);
-                scheme.Vbe = Convert.ToDouble(VbeTextBox.Text);
-                scheme.dhfe = Convert.ToDouble(dhfeTextBox.Text);
-                scheme.dVbe = Convert.ToDouble(dVbeTextBox.Text) / 1000;
-                scheme.dIcbo = Convert.ToDouble(dIcboTextBox.Text);
-
                 // Расчёт параметров
                 double IcMin = scheme.CalculateIc(scheme.hfeMin, scheme.TcMin);
                 double IcMax = scheme.CalculateIc(scheme.hfeMax, scheme.TcMax);

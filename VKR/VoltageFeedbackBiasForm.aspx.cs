@@ -31,7 +31,7 @@ namespace VKR
             scheme.TcMin = Convert.ToDouble(TcMinTextBox.Text);
             scheme.TcMax = Convert.ToDouble(TcMaxTextBox.Text);
             scheme.Vbe = Convert.ToDouble(VbeTextBox.Text);
-            scheme.dhfe = Convert.ToDouble(dhFETextBox.Text);
+            scheme.dhfe = Convert.ToDouble(dhfeTextBox.Text);
             scheme.dVbe = Convert.ToDouble(dVbeTextBox.Text) / 1000;
             scheme.dIcbo = Convert.ToDouble(dIcboTextBox.Text);
 

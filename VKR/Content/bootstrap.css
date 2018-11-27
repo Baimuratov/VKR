@@ -302,7 +302,7 @@ table {
 *:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-          box-sizing: border-box;
+          box-sizing: initial;
 }
 
 html {
@@ -500,6 +500,7 @@ h6 small,
 h1,
 h2,
 h3 {
+    margin-left: 15px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -759,10 +760,8 @@ pre code {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .container:before,
@@ -4086,8 +4085,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-collapse {
   max-height: 340px;
-  padding-right: 15px;
-  padding-left: 15px;
   overflow-x: visible;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
