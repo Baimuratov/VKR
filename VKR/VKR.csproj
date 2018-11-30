@@ -222,15 +222,10 @@
     <Content Include="WebForm2.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Resources\BaseBias.png" />
-    <None Include="Resources\BaseBiasM.png" />
     <None Include="Resources\CollectorFB.png" />
-    <None Include="Resources\CollectorFBM.png" />
     <None Include="Resources\EmitterFB.png" />
-    <None Include="Resources\EmitterFBM.png" />
     <None Include="Resources\V-FB I-Source.png" />
-    <None Include="Resources\V-FB I-SourceM.png" />
     <None Include="Resources\V-FB V-Source.png" />
-    <None Include="Resources\V-FB V-SourceM.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -415,7 +410,7 @@
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="TransistorBias.cs" />
-    <Compile Include="VoltageFeedbackBias.cs" />
+    <Compile Include="VoltageFeedback.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -430,7 +425,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EmitterFeedbackBias.cs" />
+    <Compile Include="EmitterFeedback.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

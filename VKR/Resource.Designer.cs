@@ -73,16 +73,6 @@ namespace VKR {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BaseBiasM {
-            get {
-                object obj = ResourceManager.GetObject("BaseBiasM", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap BaseBiasPrev {
             get {
                 object obj = ResourceManager.GetObject("BaseBiasPrev", resourceCulture);
@@ -103,29 +93,9 @@ namespace VKR {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CollectorFBM {
-            get {
-                object obj = ResourceManager.GetObject("CollectorFBM", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap EmitterFB {
             get {
                 object obj = ResourceManager.GetObject("EmitterFB", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap EmitterFBM {
-            get {
-                object obj = ResourceManager.GetObject("EmitterFBM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,29 +133,9 @@ namespace VKR {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap V_FB_I_SourceM {
-            get {
-                object obj = ResourceManager.GetObject("V_FB_I_SourceM", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap V_FB_V_Source {
             get {
                 object obj = ResourceManager.GetObject("V_FB_V_Source", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap V_FB_V_SourceM {
-            get {
-                object obj = ResourceManager.GetObject("V_FB_V_SourceM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -5,7 +5,7 @@ namespace VKR
     /// <summary>
     /// Содержит параметры для смещения биполярного транзистора с обратным коллектором
     /// </summary>
-    public class VoltageFeedbackBias : TransistorBias
+    public class VoltageFeedback : TransistorBias
     {
         /// <summary>
         /// Сопротивление базы, Ом

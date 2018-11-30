@@ -4,27 +4,27 @@
 
     <h1>Типы смещений транзисторов</h1>
     <div class="row" style="text-align: center">
-        <div class="col-md-4">
+        <div class="col-md-3">
             <a href="BaseBiasForm.aspx"><img src="Resources/BaseBiasPrev.png" /></a>
             <br />
             <a href="BaseBiasForm.aspx" style="color: #000000">Смещение с общей базой</a>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <a href="VoltageFeedbackBiasForm.aspx"><img src="Resources/VFBPrev.png" /></a>
             <br />
             <a href="VoltageFeedbackBiasForm.aspx">Смещение с обратным коллектором</a>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <a href="VoltageFeedbackCurrentSourceForm.aspx"><img src="Resources/VFBISourcePrev.png" /></a>
             <br />
             <a href="VoltageFeedbackCurrentSourceForm.aspx">Смещение с обратным напряжением с источником тока</a>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <a href="VoltageFeedbackVoltageSourceForm.aspx"><img src="Resources/VFBVSourcePrev.png" /></a>
             <br />
             <a href="VoltageFeedbackVoltageSourceForm.aspx">Смещение с обратным напряжением с источником напряжения</a>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <a href="EmitterFeedbackForm.aspx"><img src="Resources/EmitterFBPrev.png" /></a>
             <br />
             <a href="EmitterFeedbackForm.aspx">Смещение с обратным эмиттером</a>

@@ -32,7 +32,7 @@
             <li>Введите параметры транзистора</li>
             <li>Рассчитайте сопротивления смещения и анализ цепи</li>
         </ol>
-            <div style="border: thin solid #808080; width: 383px; height: 171px; z-index: 1; left: 489px; position: absolute;">
+            <div style="border: thin solid #808080; width: 396px; height: 171px; z-index: 1; left: 489px; position: absolute; top: 193px;">
             Параметры транзистора<br />
             <br />
             <div style="width: 59px; text-align: right; height: 120px; z-index: 1; left: 0px; top: 38px; position: absolute;">
@@ -44,11 +44,11 @@
             </div>
             <div style="width: 330px; position: absolute; top: 38px; left: 66px; z-index: 1; height: 124px">
                 <asp:TextBox ID="hfeMinTextBox" runat="server" Height="15px" Width="50px">50</asp:TextBox> &nbsp;min
-                <asp:CustomValidator ID="hfeMinValidator" runat="server" ControlToValidate="hfeMinTextBox" ErrorMessage="Значение h<sub>FE</sub> Min должно быть числом и соответствовать условиям:<br/>1 ≤ h<sub>FE</sub> Min ≤ 10000, h<sub>FE</sub> Min < h<sub>FE</sub> Typ" OnServerValidate="hfeMinValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение hFE Min должно быть числом и соответствовать условиям: 1 ≤ hFE Min ≤ 10000, hFE Min < hFE Typ" /></asp:CustomValidator>&nbsp;
+                <asp:CustomValidator ID="hfeMinValidator" runat="server" ControlToValidate="hfeMinTextBox" ErrorMessage="Значение h<sub>FE</sub> min должно быть числом и отвечать условиям:<br/>1 ≤ h<sub>FE</sub> min ≤ 10000<br/>h<sub>FE</sub> min < h<sub>FE</sub> typ" OnServerValidate="hfeMinValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение hFE min должно быть числом и отвечать условиям: 1 ≤ hFE min ≤ 10000, hFE min < hFE typ" /></asp:CustomValidator>&nbsp;
                 <asp:TextBox ID="hfeTypTextBox" runat="server" Height="15px" Width="50px">80</asp:TextBox> &nbsp;typ
-                <asp:CustomValidator ID="hfeTypValidator" runat="server" ErrorMessage="Значение h<sub>FE</sub> Typ должно быть числом и соответствовать условиям:<br/>1 ≤ h<sub>FE</sub> Typ ≤ 10000, h<sub>FE</sub> Min < h<sub>FE</sub> Typ < h<sub>FE</sub> Max" ControlToValidate="hfeTypTextBox" OnServerValidate="hfeTypValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение hFE Typ должно быть числом и соответствовать условиям: 1 ≤ hFE Typ ≤ 10000, hFE Min < hFE Typ < hFE Max" /></asp:CustomValidator>&nbsp;
+                <asp:CustomValidator ID="hfeTypValidator" runat="server" ErrorMessage="Значение h<sub>FE</sub> typ должно быть числом и отвечать условиям:<br/>1 ≤ h<sub>FE</sub> typ ≤ 10000<br/>h<sub>FE</sub> min < h<sub>FE</sub> typ < h<sub>FE</sub> max" ControlToValidate="hfeTypTextBox" OnServerValidate="hfeTypValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение hFE typ должно быть числом и отвечать условиям: 1 ≤ hFE typ ≤ 10000, hFE min < hFE typ < hFE max" /></asp:CustomValidator>&nbsp;
                 <asp:TextBox ID="hfeMaxTextBox" runat="server" Height="15px" Width="50px">150</asp:TextBox> &nbsp;max
-                <asp:CustomValidator ID="hfeMaxValidator" runat="server" ErrorMessage="Значение h<sub>FE</sub> Max должно быть числом и соответствовать условиям:<br/>1 ≤ h<sub>FE</sub> Max ≤ 10000, h<sub>FE</sub> Max > h<sub>FE</sub> Typ" ControlToValidate="hfeMaxTextBox" OnServerValidate="hfeMaxValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение hFE Max должно быть числом и соответствовать условиям: 1 ≤ hFE Max ≤ 10000, hFE Max > hFE Typ" /></asp:CustomValidator>
+                <asp:CustomValidator ID="hfeMaxValidator" runat="server" ErrorMessage="Значение h<sub>FE</sub> max должно быть числом и отвечать условиям:<br/>1 ≤ h<sub>FE</sub> max ≤ 10000<br/>h<sub>FE</sub> max > h<sub>FE</sub> typ" ControlToValidate="hfeMaxTextBox" OnServerValidate="hfeMaxValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение hFE max должно быть числом и отвечать условиям: 1 ≤ hFE max ≤ 10000, hFE max > hFE typ" /></asp:CustomValidator>
                 <br />
                 <br />
                 <asp:TextBox ID="IcboTextBox" runat="server" Height="15px" Width="50px">0,1</asp:TextBox>&nbsp;мкА
@@ -56,10 +56,10 @@
                 <br />
                 <br />
                 <asp:TextBox ID="TcMinTextBox" runat="server" Height="15px" Width="50px">-25</asp:TextBox>&nbsp;min
-                <asp:CustomValidator ID="TcMinValidator" runat="server" ErrorMessage="Значение T<sub>C</sub> Min должно быть числом и соответствовать условиям:<br/>-273 ≤ T<sub>C</sub> Min ≤ 200, T<sub>C</sub> Min < T<sub>C</sub> Typ" ControlToValidate="TcMinTextBox" OnServerValidate="TcMinValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение Tc Min должно быть числом и соответствовать условиям: -273 ≤ Tc Min ≤ 200, Tc Min < Tc Typ" /></asp:CustomValidator>&nbsp;
+                <asp:CustomValidator ID="TcMinValidator" runat="server" ErrorMessage="Значение T<sub>C</sub> min должно быть числом и отвечать условиям:<br/>-273 ≤ T<sub>C</sub> min ≤ 200<br/>T<sub>C</sub> min < T<sub>C</sub> typ" ControlToValidate="TcMinTextBox" OnServerValidate="TcMinValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение Tc min должно быть числом и отвечать условиям: -273 ≤ Tc min ≤ 200, Tc min < Tc typ" /></asp:CustomValidator>&nbsp;
                 <asp:TextBox ID="TcTypTextBox" runat="server" Height="15px" Width="50px" ReadOnly="True">25</asp:TextBox>&nbsp;typ
                 <asp:TextBox ID="TcMaxTextBox" runat="server" Height="15px" Width="50px">65</asp:TextBox>&nbsp;max
-                <asp:CustomValidator ID="TcMaxValidator" runat="server" ErrorMessage="Значение T<sub>C</sub> Max должно быть числом и соответствовать условиям:<br/>-273 ≤ T<sub>C</sub> Max ≤ 200, T<sub>C</sub> Max > T<sub>C</sub> Typ" ControlToValidate="TcMaxTextBox" OnServerValidate="TcMaxValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение Tc Max должно быть числом и соответствовать условиям: -273 ≤ Tc Max ≤ 200, Tc Max > Tc Typ" /></asp:CustomValidator>&nbsp;°C
+                <asp:CustomValidator ID="TcMaxValidator" runat="server" ErrorMessage="Значение T<sub>C</sub> max должно быть числом и отвечать условиям:<br/>-273 ≤ T<sub>C</sub> max ≤ 200<br/>T<sub>C</sub> max > T<sub>C</sub> typ" ControlToValidate="TcMaxTextBox" OnServerValidate="TcMaxValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение Tc max должно быть числом и отвечать условиям: -273 ≤ Tc max ≤ 200, Tc max > Tc typ" /></asp:CustomValidator>&nbsp;°C
             </div>
         </div> 
         <div style="border: thin solid #808080; height: 204px; width: 250px; z-index: 1; left: 622px; top: 320px; position: absolute">
@@ -158,6 +158,6 @@
             </asp:Table>
         </div>
         <asp:Button ID="CalculateButton" runat="server" OnClick="CalculateButton_Click" style="z-index: 1; left: 429px; top: 477px; position: absolute" Text="Рассчитать" />
-        <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Пожалуйста, исправьте следующие ошибки:" style="z-index: 1; left: 891px; position: absolute;" BorderColor="Red" BorderStyle="Dashed" BorderWidth="1px" />
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="Пожалуйста, исправьте следующие ошибки:" style="z-index: 1; left: 900px; position: absolute; top: 193px;" BorderColor="Red" BorderStyle="Dashed" BorderWidth="1px" />
     </div>
 </asp:Content>
