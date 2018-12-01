@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="VoltageFeedbackCurrentSourceForm.aspx.cs" Inherits="VKR.VoltageFeedbackCurrentSourceForm" %>
+﻿<%@ Page Title="Комбинированная схема смещения" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="VoltageFeedbackCurrentSourceForm.aspx.cs" Inherits="VKR.VoltageFeedbackCurrentSourceForm" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-        <div style="height: 798px; width: 1564px;" class="auto-style1">
-            <h2>Смещение с общей базой</h2>
+        <div style="height: 798px;" class="auto-style1">
+            <h2>Комбинированная схема смещения</h2>
             <br />
         <div style="height: 327px; width: 595px; position: absolute; left: 15px;">
             <img src="Resources/V-FB%20I-Source.png" style="z-index: -4; left: 35px; position: absolute; top: 28px;" />
@@ -32,9 +32,9 @@
             <asp:Label ID="Ohm4Label" runat="server" style="z-index: 1; left: 202px; top: 244px; position: absolute" Text="Ом"></asp:Label>
             <asp:Label ID="VbeLabel" runat="server" style="z-index: 1; left: 202px; top: 203px; position: absolute" Text="V<sub>BE</sub>"></asp:Label>
             <asp:Label ID="Irb2Label" runat="server" style="z-index: 1; left: 67px; top: 198px; position: absolute" Text="I<sub>RB2</sub>"></asp:Label>
-            <asp:CustomValidator ID="VccValidator" runat="server" ControlToValidate="VccTextBox" style="z-index: 1; left: 576px; position: absolute; top: 28px;" OnServerValidate="VccValidator_ServerValidate" ErrorMessage="Значение V<sub>CC</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>CC</sub> ≤ 1000" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение Vcc должно быть числом и лежать в интервале: 0 < Vcc ≤ 1000"/></asp:CustomValidator>
-            <asp:CustomValidator ID="IcValidator" runat="server" ControlToValidate="IcTextBox" ErrorMessage="Значение I<sub>C</sub> должно быть числом и лежать в интервале:<br/>0 < I<sub>C</sub> ≤ 5000" OnServerValidate="IcValidator_ServerValidate" style="z-index: 1; left: 416px; top: 100px; position: absolute" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение Ic должно быть числом и лежать в интервале:0 < Ic ≤ 5000"/></asp:CustomValidator>
-            <asp:CustomValidator ID="VceValidator" runat="server" ControlToValidate="VceTextBox" OnServerValidate="VceValidator_ServerValidate" style="z-index: 1; left: 438px; top: 173px; position: absolute" ErrorMessage="Значение V<sub>CE</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>CE</sub> < V<sub>CC</sub>" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение Vce должно быть числом и лежать в интервале:0 < Vce < Vcc"/></asp:CustomValidator>
+            <asp:CustomValidator ID="VccValidator" runat="server" ControlToValidate="VccTextBox" style="z-index: 1; left: 576px; position: absolute; top: 25px;" OnServerValidate="VccValidator_ServerValidate" ErrorMessage="Значение V<sub>CC</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>CC</sub> ≤ 1000" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение Vcc должно быть числом и лежать в интервале: 0 < Vcc ≤ 1000"/></asp:CustomValidator>
+            <asp:CustomValidator ID="IcValidator" runat="server" ControlToValidate="IcTextBox" ErrorMessage="Значение I<sub>C</sub> должно быть числом и лежать в интервале:<br/>0 < I<sub>C</sub> ≤ 5000" OnServerValidate="IcValidator_ServerValidate" style="z-index: 1; left: 416px; top: 97px; position: absolute" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение Ic должно быть числом и лежать в интервале:0 < Ic ≤ 5000"/></asp:CustomValidator>
+            <asp:CustomValidator ID="VceValidator" runat="server" ControlToValidate="VceTextBox" OnServerValidate="VceValidator_ServerValidate" style="z-index: 1; left: 438px; top: 170px; position: absolute" ErrorMessage="Значение V<sub>CE</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>CE</sub> < V<sub>CC</sub>" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение Vce должно быть числом и лежать в интервале:0 < Vce < Vcc"/></asp:CustomValidator>
         </div>
         <ol style="position: absolute; top: 465px; left: 15px;">
             <li>Введите значения V<sub>CC</sub>, V<sub>CE</sub> и I<sub>C</sub>, используя запятую <br /> качестве разделителя целой и дробной части</li>
@@ -119,7 +119,7 @@
         </div>
         <div style="z-index: 1; left: 55px; top: 559px; position: absolute; height: 173px; width: 227px">
             Ток коллектора, I<sub>C</sub> (мА)<br />
-            <asp:Table ID="IcTable" runat="server" GridLines="Both">
+            <asp:Table ID="IcTable" runat="server" GridLines="Both" CssClass="table">
                 <asp:TableRow runat="server" BackColor="#EEEEF2" HorizontalAlign="Center" VerticalAlign="Middle" Height="24px">
                     <asp:TableCell runat="server" Width="50px">h<sub>FE</sub> = </asp:TableCell>
                     <asp:TableCell runat="server" Width="50px"></asp:TableCell>
@@ -151,7 +151,7 @@
         </div>
         <div style="width: 399px; z-index: 1; left: 615px; top: 559px; position: absolute; height: 182px">
             Анализ стабильности<br />
-            <asp:Table ID="STable" runat="server" GridLines="Both" Width="400px">
+            <asp:Table ID="STable" runat="server" GridLines="Both" Width="400px" CssClass="table">
                 <asp:TableRow ID="Head" runat="server" BackColor="#EEEEF2" BorderWidth="1px" HorizontalAlign="Center" VerticalAlign="Middle">
                     <asp:TableCell runat="server"></asp:TableCell>
                     <asp:TableCell runat="server">Стабилизирующие факторы</asp:TableCell>

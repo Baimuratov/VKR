@@ -1425,10 +1425,11 @@ th {
 .table thead > tr > td,
 .table tbody > tr > td,
 .table tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.428571429;
-  vertical-align: top;
-  border-top: 1px solid #dddddd;
+  /*line-height: 1.428571429;*/
+  text-align: center;
+  vertical-align: middle;
+  max-width: 100px;
+  overflow:auto;
 }
 
 .table thead > tr > th {

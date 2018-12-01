@@ -445,15 +445,6 @@ namespace VKR {
         protected global::System.Web.UI.WebControls.Table STable;
         
         /// <summary>
-        /// Head элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow Head;
-        
-        /// <summary>
         /// Icbo элемент управления.
         /// </summary>
         /// <remarks>
@@ -499,12 +490,12 @@ namespace VKR {
         protected global::System.Web.UI.WebControls.Button CalculateButton;
         
         /// <summary>
-        /// ValidationSummary1 элемент управления.
+        /// ValidationSummary элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary;
     }
 }

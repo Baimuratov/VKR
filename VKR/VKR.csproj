@@ -198,7 +198,6 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -213,12 +212,12 @@
     </Content>
     <Content Include="BaseBiasForm.aspx" />
     <Content Include="ClassDiagram.cd" />
-    <None Include="Resources\VFBVSourcePrev.png" />
+    <None Include="Resources\Exclamation.png" />
     <None Include="Resources\BaseBiasPrev.png" />
     <None Include="Resources\EmitterFBPrev.png" />
-    <None Include="Resources\Exclamation.png" />
     <None Include="Resources\VFBISourcePrev.png" />
     <None Include="Resources\VFBPrev.png" />
+    <None Include="Resources\VFBVSourcePrev.png" />
     <Content Include="WebForm2.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Resources\BaseBias.png" />
@@ -411,13 +410,6 @@
     </Compile>
     <Compile Include="TransistorBias.cs" />
     <Compile Include="VoltageFeedback.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

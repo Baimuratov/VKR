@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EmitterFeedbackForm.aspx.cs" Inherits="VKR.EmitterFeedbackForm" %>
+﻿<%@ Page Title="Схема эмиттерной стабилизации" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EmitterFeedbackForm.aspx.cs" Inherits="VKR.EmitterFeedbackForm" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
         <div style="height: 798px; width: 1564px;" class="auto-style1">
-        <h2>Смещение с обратным эмиттером</h2>
+        <h2>Схема эмиттерной стабилизации</h2>
             <br />
         <div style="height: 327px; width: 567px; position: absolute;">
             <img src="Resources/EmitterFB.png" style="z-index: -4; left: 0px; top: 4px; position: absolute" /><asp:TextBox ID="Rb1TextBox" runat="server" Height="15px" style="z-index: 1; left: 72px; top: 68px; position: absolute" Width="70px" ReadOnly="True"></asp:TextBox>
@@ -91,27 +91,27 @@
                 <br />
                 <asp:TextBox ID="VbeTextBox" runat="server" Height="15px" Width="50px">0,78</asp:TextBox>
                 &nbsp;В
-                <asp:CustomValidator ID="VbeValidator" runat="server" ErrorMessage="Значение V<sub>BE</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>BE</sub> ≤ 5" ControlToValidate="VbeTextBox" OnServerValidate="VbeValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение Vbe должно быть числом и лежать в интервале: 0 < Vbe ≤ 5" /></asp:CustomValidator>
+                <asp:CustomValidator ID="VbeValidator" runat="server" ErrorMessage="Значение V<sub>BE</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>BE</sub> ≤ 5" ControlToValidate="VbeTextBox" OnServerValidate="VbeValidator_ServerValidate" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение Vbe должно быть числом и лежать в интервале: 0 < Vbe ≤ 5" /></asp:CustomValidator>
                 <br />
                 <br />
                 <asp:TextBox ID="dhfeTextBox" runat="server" Height="15px" Width="50px">0,5</asp:TextBox>
                 &nbsp;%/°C‪‪
-                <asp:CustomValidator ID="dhfeValidator" runat="server" ErrorMessage="Значение δh<sub>FE</sub>/δT должно быть числом и лежать в интервале:<br/>-1000 ≤ δh<sub>FE</sub>/δT ≤ 1000" ControlToValidate="dhfeTextBox" OnServerValidate="dhfeValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение δhFE/δT должно быть числом и лежать в интервале: -1000 ≤ δhFE/δT ≤ 1000" /></asp:CustomValidator>
+                <asp:CustomValidator ID="dhfeValidator" runat="server" ErrorMessage="Значение δh<sub>FE</sub>/δT должно быть числом и лежать в интервале:<br/>-1000 ≤ δh<sub>FE</sub>/δT ≤ 1000" ControlToValidate="dhfeTextBox" OnServerValidate="dhfeValidator_ServerValidate" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение δhFE/δT должно быть числом и лежать в интервале: -1000 ≤ δhFE/δT ≤ 1000" /></asp:CustomValidator>
                 <br />
                 <br />
                 <asp:TextBox ID="dVbeTextBox" runat="server" Height="15px" Width="50px">-2</asp:TextBox>
                 &nbsp;мВ/°C
-                <asp:CustomValidator ID="dVbeValidator" runat="server" ErrorMessage="Значение δV'<sub>BE</sub>/δT должно быть числом и лежать в интервале:<br/>-10000 ≤ δV'<sub>BE</sub>/δT ≤ 10000" ControlToValidate="dVbeTextBox" OnServerValidate="dVbeValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение δV'be/δT должно быть числом и лежать в интервале: -10000 ≤ δV'be/δT ≤ 10000" /></asp:CustomValidator>
+                <asp:CustomValidator ID="dVbeValidator" runat="server" ErrorMessage="Значение δV'<sub>BE</sub>/δT должно быть числом и лежать в интервале:<br/>-10000 ≤ δV'<sub>BE</sub>/δT ≤ 10000" ControlToValidate="dVbeTextBox" OnServerValidate="dVbeValidator_ServerValidate" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение δV'be/δT должно быть числом и лежать в интервале: -10000 ≤ δV'be/δT ≤ 10000" /></asp:CustomValidator>
                 <br />
                 <br />
                 <asp:TextBox ID="dIcboTextBox" runat="server" Height="15px" Width="50px">2</asp:TextBox>
             &nbsp;/10°C
-                <asp:CustomValidator ID="dIcboValidator" runat="server" ErrorMessage="Значение δI<sub>CBO</sub>/δT factor должно быть числом и лежать в интервале:<br/>0 < δI<sub>CBO</sub>/δT factor ≤ 500" ControlToValidate="dIcboTextBox" OnServerValidate="dIcboValidator_ServerValidate"><img src="Resources/Exclamation.png" title="Значение δIcbo/δT factor должно быть числом и лежать в интервале: 0 < δIcbo/δT factor ≤ 500" /></asp:CustomValidator>
+                <asp:CustomValidator ID="dIcboValidator" runat="server" ErrorMessage="Значение δI<sub>CBO</sub>/δT factor должно быть числом и лежать в интервале:<br/>0 < δI<sub>CBO</sub>/δT factor ≤ 500" ControlToValidate="dIcboTextBox" OnServerValidate="dIcboValidator_ServerValidate" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение δIcbo/δT factor должно быть числом и лежать в интервале: 0 < δIcbo/δT factor ≤ 500" /></asp:CustomValidator>
                 </div>
         </div>
         <div style="z-index: 1; left: 55px; top: 586px; position: absolute; height: 173px; width: 227px">
             Ток коллектора, I<sub>C</sub> (мА)<br />
-            <asp:Table ID="IcTable" runat="server" GridLines="Both">
+            <asp:Table ID="IcTable" runat="server" GridLines="Both" CssClass="table">
                 <asp:TableRow runat="server" BackColor="#EEEEF2" HorizontalAlign="Center" VerticalAlign="Middle" Height="24px">
                     <asp:TableCell runat="server" Width="50px">h<sub>FE</sub> = </asp:TableCell>
                     <asp:TableCell runat="server" Width="50px"></asp:TableCell>
@@ -143,7 +143,7 @@
         </div>
         <div style="width: 399px; z-index: 1; left: 607px; top: 586px; position: absolute; height: 182px">
             Анализ стабильности<br />
-            <asp:Table ID="STable" runat="server" GridLines="Both" Width="400px">
+            <asp:Table ID="STable" runat="server" GridLines="Both" Width="400px" CssClass="table">
                 <asp:TableRow ID="Head" runat="server" BackColor="#EEEEF2" BorderWidth="1px" HorizontalAlign="Center" VerticalAlign="Middle">
                     <asp:TableCell runat="server"></asp:TableCell>
                     <asp:TableCell runat="server">Стабилизирующие факторы</asp:TableCell>

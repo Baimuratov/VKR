@@ -1,7 +1,24 @@
-﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="VKR.About" %>
+﻿<%@ Page Title="Руководство пользователя" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="VKR.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
-    <h3>Your application description page.</h3>
-    <p>Use this area to provide additional information.</p>
+    <h3>Руководство пользователя</h3>
+    <p>
+        Данное web-приложение используется для расчёта параметров термостабилизации усилительных каскадов на биполярном транзисторе. Определение этих характеристик требуется при проектировании различных радиоэлектронных устройств. Программа позволяет выполнять расчёт для следующих видов транзисторных смещений: базовая стабилизация, коллекторная стабилизация, комбинированная схема смещения, схема с фиксированным напряжением база-эмиттер, эмиттерная стабилизация.
+
+    </p>
+    <p>
+        Для начала работы на главной странице следует выбрать требуемый тип смещения. В открывшейся форме указываются исходные данные. Ниже приведён список величин, которые задаются для всех видов смещений.
+    </p>
+    <p>
+        V<sub>CC</sub> – напряжение источника питания, В;<br />
+        V<sub>CE</sub> – напряжение между коллектором и эмиттером, В;<br />
+        I<sub>C</sub> – номинальный ток коллектора, мА.<br />
+    </p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
 </asp:Content>

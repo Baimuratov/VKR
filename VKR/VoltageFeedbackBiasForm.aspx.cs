@@ -27,8 +27,8 @@ namespace VKR
                 double deltaIcInternalVbe = scheme.DeltaIcInternalVbe(scheme.hfeTyp, scheme.TcMax - scheme.TcTyp);
                 double deltaIcHfe = scheme.DeltaIcHfe(scheme.hfeTyp, scheme.TcMax - scheme.TcTyp);
 
-                RbTextBox.Text = scheme.Rb.ToString();
-                RcTextBox.Text = scheme.Rc.ToString();
+                RbTextBox.Text = scheme.Rb.ToString("0.");
+                RcTextBox.Text = scheme.Rc.ToString("0.");
                 IccTextBox.Text = scheme.Icc.ToString("0.00");
 
                 IcTable.Rows[0].Cells[1].Text = scheme.hfeMin.ToString();
