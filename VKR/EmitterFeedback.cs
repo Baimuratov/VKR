@@ -3,7 +3,7 @@
 namespace VKR
 {
     /// <summary>
-    /// Содержит параметры для смещения биполярного транзистора с обратным эмиттером
+    /// Содержит параметры для схемы эмиттерной стабилизации
     /// </summary>
     public class EmitterFeedback : TransistorBias
     {

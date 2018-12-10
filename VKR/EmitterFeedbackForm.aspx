@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Схема эмиттерной стабилизации" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EmitterFeedbackForm.aspx.cs" Inherits="VKR.EmitterFeedbackForm" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-        <div style="height: 798px; width: 1564px;" class="auto-style1">
+        <div style="height: 798px;" class="auto-style1">
         <h2>Схема эмиттерной стабилизации</h2>
             <br />
         <div style="height: 327px; width: 567px; position: absolute;">

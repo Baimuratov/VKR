@@ -5,7 +5,7 @@
         <h2>Схема базовой стабилизации</h2>
             <br />
         <div style="height: 282px; width: 470px; position: absolute; left: 15px;">
-            <img src="Resources/BaseBias.png" style="z-index: -2; left: 10px; position: inherit" />
+            <img src="Resources/BaseBias.png" style="z-index: -2; left: 10px; position: inherit;" />
             <asp:Label ID="mA1Label" runat="server" style="z-index: 1; left: 439px; top: 32px; position: absolute" Text="мА"></asp:Label>
             <asp:Label ID="V1Label" runat="server" style="z-index: 1; left: 438px; position: absolute; top: 5px;" Text="В"></asp:Label>
             <asp:TextBox ID="VccTextBox" runat="server" Height="15px" style="z-index: 1; left: 374px; position: absolute; top: 5px;" Width="50px">2,7</asp:TextBox>
@@ -23,6 +23,7 @@
             <asp:Label ID="IcLabel" runat="server" style="z-index: 1; left: 241px; top: 112px; position: absolute" Text="I<sub>C</sub> = "></asp:Label>
             <asp:Label ID="VccLabel" runat="server" style="z-index: 1; left: 329px; position: absolute; top: 5px;" Text="V<sub>CC</sub> = "></asp:Label>
             <asp:Label ID="IccLabel" runat="server" style="z-index: 1; left: 329px; top: 32px; position: absolute" Text="I<sub>CC</sub> = "></asp:Label>
+            <asp:Label ID="VbeLabel" runat="server" style="z-index: 1; left: 162px; top: 213px; position: absolute; height: 20px;" Text="V<sub>BE</sub>"></asp:Label>
             <asp:CustomValidator ID="VccValidator" runat="server" ControlToValidate="VccTextBox" style="z-index: 1; left: 453px; position: absolute; top: 2px;" OnServerValidate="VccValidator_ServerValidate" ErrorMessage="Значение V<sub>CC</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>CC</sub> ≤ 1000" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение Vcc должно быть числом и лежать в интервале: 0 < Vcc ≤ 1000"/></asp:CustomValidator>
             <asp:CustomValidator ID="IcValidator" runat="server" ControlToValidate="IcTextBox" ErrorMessage="Значение I<sub>C</sub> должно быть числом и лежать в интервале:<br/>0 < I<sub>C</sub> ≤ 5000" OnServerValidate="IcValidator_ServerValidate" style="z-index: 1; left: 364px; top: 109px; position: absolute" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение Ic должно быть числом и лежать в интервале:0 < Ic ≤ 5000"/></asp:CustomValidator>
             <asp:CustomValidator ID="VceValidator" runat="server" ControlToValidate="VceTextBox" OnServerValidate="VceValidator_ServerValidate" style="z-index: 1; left: 390px; top: 173px; position: absolute; height: 20px;" ErrorMessage="Значение V<sub>CE</sub> должно быть числом и лежать в интервале:<br/>0 < V<sub>CE</sub> < V<sub>CC</sub>" ValidateEmptyText="True"><img src="Resources/Exclamation.png" title="Значение Vce должно быть числом и лежать в интервале:0 < Vce < Vcc"/></asp:CustomValidator>

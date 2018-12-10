@@ -3,8 +3,7 @@
 namespace VKR
 {
     /// <summary>
-    /// Содержит параметры для смещения биполярного транзистора 
-    /// с обратным напряжением с источником постоянного тока
+    /// Содержит параметры для комбинированной схемы смещения
     /// </summary>
     public class VoltageFeedbackCurrentSource : TransistorBias
     {
